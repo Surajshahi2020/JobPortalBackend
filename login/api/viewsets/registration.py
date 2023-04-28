@@ -11,6 +11,7 @@ from drf_spectacular.utils import (
 from login.api.serializers.registration import (
     StudentCreateSerializer,
     RecruiterCreateSerializer,
+    AdminLoginSerializer,
 )
 from django.contrib.auth.models import User
 from login.models import StudentUser, Recruiter
@@ -74,5 +75,32 @@ class RecruiterAccountCreateView(generics.CreateAPIView):
                 "title": "Accounts Create",
                 "message": "Recruiter Account Created Successfully!",
                 "data": response.data,
+            }
+        )
+
+
+class AdminViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = AdminLoginSerializer
+
+    http_method_names = [
+        "post",
+    ]
+
+    @extend_schema(
+        description="Admin login Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: AdminLoginSerializer,
+            404: {"message": "Bad Request"},
+        },
+        tags=["Registration Apis"],
+    )
+    def create(self, request, *args, **kwargs):
+        response = super().create(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Admin Login",
+                "message": "Admin created Successfully",
             }
         )

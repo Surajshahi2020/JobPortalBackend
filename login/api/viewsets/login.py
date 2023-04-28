@@ -17,15 +17,20 @@ from drf_spectacular.utils import (
 
 from login.api.serializers.login import (
     LoginSerializer,
+    RecruiterLoginSerializer,
 )
-from login.models import StudentUser
+
+from login.models import (
+    StudentUser,
+    Recruiter,
+)
 import datetime
 
 
 @extend_schema_view(
     post=extend_schema(
-        description="Login Api",
-        summary="Email Login Api",
+        description="Student Login Api",
+        summary="Refer to Schemas At Bottom",
         request=LoginSerializer,
         responses={
             200: OpenApiResponse(
@@ -49,37 +54,37 @@ class StudentLoginView(generics.CreateAPIView):
             student = StudentUser.objects.filter(user=user)
             if student:
                 student: StudentUser = student.first()
-                if student.is_blocked:
-                    return Response(
-                        {
-                            "title": "Account Login",
-                            "message": "Account Blocked !",
-                        },
-                        status=401,
-                    )
-                if user.check_password(data.get("password")):
-                    refresh = RefreshToken.for_user(student)
-                    refresh.set_exp(lifetime=datetime.timedelta(days=14))
-                    access = refresh.access_token
-                    access.set_exp(lifetime=datetime.timedelta(days=1))
-                    return Response(
-                        {
-                            "title": "Account Login",
-                            "message": "Logged in successfully !",
-                            "data": {
-                                "mobile": student.mobile,
-                                "gender": student.gender,
-                                "slug": student.slug,
-                                "type": student.type,
-                                "is_blocked": student.is_blocked,
-                                "Joined date": student.user.date_joined,
-                                "is_active": student.user.is_active,
-                                "access": f"{access}",
-                                "refresh": f"{refresh}",
+                if student.type == "student":
+                    if student.is_blocked:
+                        return Response(
+                            {
+                                "title": "Account Login",
+                                "message": "Account Blocked !",
                             },
-                        }
-                    )
-                else:
+                            status=401,
+                        )
+                    if user.check_password(data.get("password")):
+                        refresh = RefreshToken.for_user(student)
+                        refresh.set_exp(lifetime=datetime.timedelta(days=14))
+                        access = refresh.access_token
+                        access.set_exp(lifetime=datetime.timedelta(days=1))
+                        return Response(
+                            {
+                                "title": "Account Login",
+                                "message": "Logged in successfully !",
+                                "data": {
+                                    "mobile": student.mobile,
+                                    "gender": student.gender,
+                                    "slug": student.slug,
+                                    "type": student.type,
+                                    "is_blocked": student.is_blocked,
+                                    "Joined date": student.user.date_joined,
+                                    "is_active": student.user.is_active,
+                                    "access": f"{access}",
+                                    "refresh": f"{refresh}",
+                                },
+                            }
+                        )
                     return Response(
                         {
                             "title": "Login",
@@ -87,29 +92,34 @@ class StudentLoginView(generics.CreateAPIView):
                         },
                         status=422,
                     )
-
-            else:
                 return Response(
                     {
                         "title": "Login",
-                        "message": "StudentUser does not exist!",
+                        "message": "Password incorrect !",
                     },
                     status=422,
                 )
-        else:
+
             return Response(
                 {
                     "title": "Login",
-                    "message": "Email does not linked with user!",
+                    "message": "Email does not linked with user!!",
                 },
                 status=422,
             )
+        return Response(
+            {
+                "title": "Login",
+                "message": "Email does not linked with user!",
+            },
+            status=422,
+        )
 
 
 @extend_schema_view(
     post=extend_schema(
         description="Account Refresh Api",
-        summary="Refresh Token Api",
+        summary="Refer to Schemas At Bottom",
         responses={
             200: OpenApiResponse(
                 description="Success Response when token refreshed successfully!",
@@ -143,3 +153,97 @@ class CustomTokenRefreshView(TokenRefreshView):
             },
             status=200,
         )
+
+
+@extend_schema_view(
+    post=extend_schema(
+        description="Recruiter Login Api",
+        summary="Refer to Schemas At Bottom",
+        request=RecruiterLoginSerializer,
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when user is loggedin successfully!",
+            ),
+            422: OpenApiResponse(
+                description="Json Data Error, occurs when invalid data is sent!",
+            ),
+        },
+        tags=["Login Apis"],
+    ),
+)
+class RecruiterLoginView(generics.CreateAPIView):
+    queryset = StudentUser.objects.all()
+    serializer_class = RecruiterLoginSerializer
+
+    def create(self, request, *args, **kwargs):
+        data = request.data
+        user = User.objects.filter(email=data.get("email")).first()
+        if user:
+            recruiter = Recruiter.objects.filter(user=user)
+            if recruiter:
+                recruiter: Recruiter = recruiter.first()
+                if recruiter.type == "recruiter":
+                    if recruiter.is_blocked:
+                        return Response(
+                            {
+                                "title": "Recruiter Login",
+                                "message": "Account Blocked !",
+                            },
+                            status=401,
+                        )
+                    if recruiter.is_status:
+                        user.check_password(data.get("password"))
+                        refresh = RefreshToken.for_user(recruiter)
+                        refresh.set_exp(lifetime=datetime.timedelta(days=14))
+                        access = refresh.access_token
+                        access.set_exp(lifetime=datetime.timedelta(days=1))
+                        return Response(
+                            {
+                                "title": "Account Login",
+                                "message": "Logged in successfully !",
+                                "data": {
+                                    "mobile": recruiter.mobile,
+                                    "gender": recruiter.gender,
+                                    "slug": recruiter.slug,
+                                    "type": recruiter.type,
+                                    "company": recruiter.company,
+                                    "is_blocked": recruiter.is_blocked,
+                                    "is_status": recruiter.is_status,
+                                    "joined date": recruiter.user.date_joined,
+                                    "is_active": recruiter.user.is_active,
+                                    "access": f"{access}",
+                                    "refresh": f"{refresh}",
+                                },
+                            }
+                        )
+                    return Response(
+                        {
+                            "title": "Account Login",
+                            "message": "Pending !",
+                        },
+                        status=401,
+                    )
+                return Response(
+                    {
+                        "title": "Account Login",
+                        "message": "Only Recruiter can login!",
+                    },
+                    status=401,
+                )
+
+            else:
+                return Response(
+                    {
+                        "title": "Recruiter Login",
+                        "message": "Email doesnot linked with user!!",
+                    },
+                    status=200,
+                )
+        else:
+            return Response(
+                {
+                    "title": "Recruiter Login",
+                    "message": "Email does not linked with user!",
+                },
+                status=200,
+            )

@@ -81,6 +81,12 @@ class RecruiterCreateSerializer(BaseUserCreateSerializer):
             "company",
         ]
 
+    extra_kwargs = {
+        "is_status": {
+            "read_only": True,
+        },
+    }
+
     def create(self, validated_data):
         password = validated_data.pop("password")
         email = validated_data.pop("email")
@@ -88,6 +94,21 @@ class RecruiterCreateSerializer(BaseUserCreateSerializer):
         user.set_password(password)
         user.save()
 
-        return Recruiter.objects.create(
-            user=user, **validated_data, type="recruiter", status="deactivated"
-        )
+        return Recruiter.objects.create(user=user, **validated_data, type="recruiter")
+
+
+class AdminLoginSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            "username",
+            "email",
+            "password",
+        ]
+
+    def is_valid(self, *, raise_exception=False):
+        data = self.initial_data
+        email = data.get("email")
+        if User.objects.filter(email=email).exists():
+            raise serializers.ValidationError("User with this Email already exists !")
+        return super().is_valid(raise_exception=raise_exception)
