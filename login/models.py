@@ -9,9 +9,10 @@ class StudentUser(models.Model):
     mobile = models.CharField(max_length=15, null=True)
     gender = models.CharField(max_length=10, null=True)
     type = models.CharField(max_length=15, null=True)
+    is_blocked = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return f"{self.user}--{self.slug}"
+        return f"{self.user}"
 
 
 class Recruiter(models.Model):
@@ -23,6 +24,7 @@ class Recruiter(models.Model):
     company = models.CharField(max_length=100, null=True)
     type = models.CharField(max_length=15, null=True)
     status = models.CharField(max_length=20, null=True)
+    is_blocked = models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return f"{self.user.username}--{self.slug}"
