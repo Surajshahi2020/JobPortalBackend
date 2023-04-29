@@ -20,3 +20,12 @@ class RecruiterLoginSerializer(BaseUserCreateSerializer):
             "email",
             "password",
         ]
+
+
+class AdminLogginSerializer(BaseUserCreateSerializer):
+    class Meta:
+        model = User
+        fields = [
+            "email",
+            "password",
+        ]

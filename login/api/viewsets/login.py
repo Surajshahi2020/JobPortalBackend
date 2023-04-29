@@ -18,6 +18,7 @@ from drf_spectacular.utils import (
 from login.api.serializers.login import (
     LoginSerializer,
     RecruiterLoginSerializer,
+    AdminLogginSerializer,
 )
 
 from login.models import (
@@ -192,43 +193,53 @@ class RecruiterLoginView(generics.CreateAPIView):
                             status=401,
                         )
                     if recruiter.is_status:
-                        user.check_password(data.get("password"))
-                        refresh = RefreshToken.for_user(recruiter)
-                        refresh.set_exp(lifetime=datetime.timedelta(days=14))
-                        access = refresh.access_token
-                        access.set_exp(lifetime=datetime.timedelta(days=1))
+                        if user.check_password(data.get("password")):
+                            refresh = RefreshToken.for_user(recruiter)
+                            refresh.set_exp(lifetime=datetime.timedelta(days=14))
+                            access = refresh.access_token
+                            access.set_exp(lifetime=datetime.timedelta(days=1))
+                            joined_date = recruiter.user.date_joined
+                            return Response(
+                                {
+                                    "title": "Account Login",
+                                    "message": "Logged in successfully !",
+                                    "data": {
+                                        "mobile": recruiter.mobile,
+                                        "gender": recruiter.gender,
+                                        "slug": recruiter.slug,
+                                        "type": recruiter.type,
+                                        "company": recruiter.company,
+                                        "is_blocked": recruiter.is_blocked,
+                                        "is_status": recruiter.is_status,
+                                        "joined date": joined_date.strftime(
+                                            "%Y-%m-%d %H:%M:%S"
+                                        ),
+                                        "is_active": recruiter.user.is_active,
+                                        "access": f"{access}",
+                                        "refresh": f"{refresh}",
+                                    },
+                                }
+                            )
                         return Response(
                             {
                                 "title": "Account Login",
-                                "message": "Logged in successfully !",
-                                "data": {
-                                    "mobile": recruiter.mobile,
-                                    "gender": recruiter.gender,
-                                    "slug": recruiter.slug,
-                                    "type": recruiter.type,
-                                    "company": recruiter.company,
-                                    "is_blocked": recruiter.is_blocked,
-                                    "is_status": recruiter.is_status,
-                                    "joined date": recruiter.user.date_joined,
-                                    "is_active": recruiter.user.is_active,
-                                    "access": f"{access}",
-                                    "refresh": f"{refresh}",
-                                },
-                            }
+                                "message": "Incorrect password !",
+                            },
+                            status=422,
                         )
                     return Response(
                         {
                             "title": "Account Login",
                             "message": "Pending !",
                         },
-                        status=401,
+                        status=422,
                     )
                 return Response(
                     {
                         "title": "Account Login",
                         "message": "Only Recruiter can login!",
                     },
-                    status=401,
+                    status=422,
                 )
 
             else:
@@ -237,7 +248,7 @@ class RecruiterLoginView(generics.CreateAPIView):
                         "title": "Recruiter Login",
                         "message": "Email doesnot linked with user!!",
                     },
-                    status=200,
+                    status=422,
                 )
         else:
             return Response(
@@ -245,5 +256,72 @@ class RecruiterLoginView(generics.CreateAPIView):
                     "title": "Recruiter Login",
                     "message": "Email does not linked with user!",
                 },
-                status=200,
+                status=422,
+            )
+
+
+class AdminloginViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = AdminLogginSerializer
+    http_method_names = [
+        "post",
+    ]
+
+    @extend_schema(
+        description="Admin login Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: AdminLogginSerializer,
+            404: {"message": "Bad Request"},
+        },
+        tags=["Login Apis"],
+    )
+    def create(self, request, *args, **kwargs):
+        data = request.data
+        user = User.objects.filter(email=data.get("email"))
+        if user:
+            user: User = user.first()
+            if user.is_staff and user.is_active and user.is_superuser:
+                if user.check_password(data.get("password")):
+                    refresh = RefreshToken.for_user(user)
+                    refresh.set_exp(lifetime=datetime.timedelta(days=14))
+                    access = refresh.access_token
+                    access.set_exp(lifetime=datetime.timedelta(days=1))
+                    joined_date = user.date_joined
+
+                    return Response(
+                        {
+                            "title": "Admin Login",
+                            "message": "AdminLogged in successfully !",
+                            "data": {
+                                "email": user.email,
+                                "joined_date": joined_date.strftime(
+                                    "%Y-%m-%d %H:%M:%S"
+                                ),
+                                "is_staff": user.is_staff,
+                                "is_active": user.is_active,
+                                "is_superuser": user.is_superuser,
+                                "access": f"{access}",
+                                "refresh": f"{refresh}",
+                            },
+                        },
+                    )
+                return Response(
+                    {
+                        "title": "Admin Login",
+                        "message": "Incorrect Password!!",
+                    }
+                )
+            return Response(
+                {
+                    "title": "Admin Login",
+                    "message": "Email doesnot linked with admin user!!",
+                }
+            )
+        else:
+            return Response(
+                {
+                    "title": "Admin Login",
+                    "message": "Email doesnot linked with user!",
+                }
             )

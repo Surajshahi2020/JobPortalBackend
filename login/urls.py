@@ -9,11 +9,13 @@ from login.api.viewsets.login import (
     StudentLoginView,
     CustomTokenRefreshView,
     RecruiterLoginView,
+    AdminloginViewSet,
 )
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register("admin-create", AdminViewSet, basename="admin_viewset")
+router.register("admin-login", AdminloginViewSet, basename="adminlogin_viewset")
 
 
 urlpatterns = [
