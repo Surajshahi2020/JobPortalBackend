@@ -27,6 +27,7 @@ urlpatterns = [
                     name="redoc",
                 ),
                 path("accounts/", include("login.urls")),
+                path("cadmin/", include("cadmin.urls")),
             ],
         ),
     ),

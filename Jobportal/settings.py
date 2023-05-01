@@ -43,9 +43,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework_simplejwt",
     "rest_framework",
     "drf_spectacular",
     "login",
+    "cadmin",
 ]
 
 MIDDLEWARE = [
