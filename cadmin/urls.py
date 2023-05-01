@@ -1,14 +1,18 @@
 from django.urls import path, include
 
 from cadmin.api.viewsets.view_user import (
-    UserListViewSet,
+    AdminListViewSet,
+    StudentListView,
+    RecruiterListView,
 )
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register("user-list", UserListViewSet, basename="userlist_viewset")
+router.register("admin-list", AdminListViewSet, basename="adminlist_viewset")
 
 
 urlpatterns = [
     path("", include(router.urls)),
+    path("student-list/", StudentListView.as_view()),
+    path("recruiter-list/", RecruiterListView.as_view()),
 ]

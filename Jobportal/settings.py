@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "rest_framework",
     "drf_spectacular",
+    "django_filters",
     "login",
     "cadmin",
 ]
