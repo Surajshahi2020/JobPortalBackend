@@ -97,7 +97,7 @@ class RecruiterCreateSerializer(BaseUserCreateSerializer):
         return Recruiter.objects.create(user=user, **validated_data, type="recruiter")
 
 
-class AdminLoginSerializer(serializers.ModelSerializer):
+class AdminCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = [
@@ -112,3 +112,15 @@ class AdminLoginSerializer(serializers.ModelSerializer):
         if User.objects.filter(email=email).exists():
             raise serializers.ValidationError("User with this Email already exists !")
         return super().is_valid(raise_exception=raise_exception)
+
+    def create(self, validated_data):
+        password = validated_data.pop("password")
+        email = validated_data.pop("email")
+        username = validated_data.pop("username")
+        user = User(
+            email=email,
+            username=username,
+        )
+        user.set_password(password)
+        user.save()
+        return user

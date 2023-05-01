@@ -281,6 +281,12 @@ class AdminloginViewSet(viewsets.ModelViewSet):
         user = User.objects.filter(email=data.get("email"))
         if user:
             user: User = user.first()
+            print(
+                11111111111111111111111111,
+                user.is_staff,
+                user.is_active,
+                user.is_superuser,
+            )
             if user.is_staff and user.is_active and user.is_superuser:
                 if user.check_password(data.get("password")):
                     refresh = RefreshToken.for_user(user)

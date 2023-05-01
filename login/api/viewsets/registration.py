@@ -7,14 +7,16 @@ from drf_spectacular.utils import (
     extend_schema_view,
     OpenApiResponse,
 )
+import threading
 
 from login.api.serializers.registration import (
     StudentCreateSerializer,
     RecruiterCreateSerializer,
-    AdminLoginSerializer,
+    AdminCreateSerializer,
 )
 from django.contrib.auth.models import User
 from login.models import StudentUser, Recruiter
+from common.mail_sender import send_mail_function
 
 
 @extend_schema_view(
@@ -79,9 +81,9 @@ class RecruiterAccountCreateView(generics.CreateAPIView):
         )
 
 
-class AdminViewSet(viewsets.ModelViewSet):
+class AdminCreateViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
-    serializer_class = AdminLoginSerializer
+    serializer_class = AdminCreateSerializer
 
     http_method_names = [
         "post",
@@ -91,13 +93,33 @@ class AdminViewSet(viewsets.ModelViewSet):
         description="Admin login Api",
         summary="Refer to Schemas At Bottom",
         responses={
-            200: AdminLoginSerializer,
+            200: AdminCreateSerializer,
             404: {"message": "Bad Request"},
         },
         tags=["Registration Apis"],
     )
     def create(self, request, *args, **kwargs):
-        response = super().create(request, *args, **kwargs)
+        data = request.data
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        dat = serializer.create(serializer.validated_data)
+        dat = self.get_serializer(dat).data
+        threading.Thread(
+            target=send_mail_function,
+            daemon=True,
+            args=(
+                data.get("email"),
+                {
+                    "data": {
+                        **dat,
+                        "id": dat.get("email"),
+                        "password": data.get("password"),
+                    },
+                    "message": "Account created successfully",
+                    "title": "Account Created,Job Portal ",
+                },
+            ),
+        ).start()
         return Response(
             {
                 "title": "Admin Login",

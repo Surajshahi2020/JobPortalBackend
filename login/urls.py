@@ -3,7 +3,7 @@ from django.urls import path, include
 from login.api.viewsets.registration import (
     StudentAccountCreateView,
     RecruiterAccountCreateView,
-    AdminViewSet,
+    AdminCreateViewSet,
 )
 from login.api.viewsets.login import (
     StudentLoginView,
@@ -14,7 +14,7 @@ from login.api.viewsets.login import (
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register("admin-create", AdminViewSet, basename="admin_viewset")
+router.register("admin-create", AdminCreateViewSet, basename="admin_viewset")
 router.register("admin-login", AdminloginViewSet, basename="adminlogin_viewset")
 
 
