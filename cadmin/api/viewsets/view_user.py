@@ -10,6 +10,8 @@ from cadmin.api.serializers.view_user import (
 )
 
 from common.pagination import CustomPagination
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter, OrderingFilter
 
 
 from login.models import StudentUser, Recruiter
@@ -22,6 +24,10 @@ class AdminListViewSet(viewsets.ModelViewSet):
     http_method_names = [
         "get",
     ]
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_fields = ["email"]
+    search_fields = ["email"]
+    ordering_fields = ["date_joined"]
 
     @extend_schema(
         description="UserList Api",
@@ -85,18 +91,18 @@ class StudentListView(generics.ListAPIView):
     queryset = StudentUser.objects.all()
     serializer_class = StudentListSerializer
     pagination_class = CustomPagination
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["mobile"]
 
     def list(self, request, *args, **kwargs):
-        student = self.get_queryset()
-        student = self.get_serializer(student, many=True)
         student_count = StudentUser.objects.all().count()
-
+        response = super().list(request, *args, **kwargs)
         return Response(
             {
                 "title": "Student List",
                 "message": "List Fetched Successfully!",
                 "total_student": student_count,
-                "data": student.data,
+                "data": response.data,
             }
         )
 
@@ -120,17 +126,17 @@ class RecruiterListView(generics.ListAPIView):
     queryset = Recruiter.objects.all()
     serializer_class = RecruiterListSerializer
     pagination_class = CustomPagination
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["mobile"]
 
     def list(self, request, *args, **kwargs):
-        recruiter = self.get_queryset()
-        recruiter = self.get_serializer(recruiter, many=True)
         recruiter_count = Recruiter.objects.all().count()
-
+        response = super().list(request, *args, **kwargs)
         return Response(
             {
-                "title": "Recruiter List",
+                "title": "Student List",
                 "message": "List Fetched Successfully!",
                 "total_recruiter": recruiter_count,
-                "data": recruiter.data,
+                "data": response.data,
             }
         )
