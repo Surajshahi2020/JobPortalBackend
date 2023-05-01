@@ -7,6 +7,7 @@ class AdminSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = [
+            "id",
             "email",
             "last_login",
             "date_joined",

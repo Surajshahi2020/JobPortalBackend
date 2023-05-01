@@ -23,6 +23,7 @@ class AdminListViewSet(viewsets.ModelViewSet):
     pagination_class = CustomPagination
     http_method_names = [
         "get",
+        "delete",
     ]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ["email"]
@@ -71,10 +72,32 @@ class AdminListViewSet(viewsets.ModelViewSet):
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
+    @extend_schema(
+        description="UserDelete Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: AdminSerializer,
+            404: {
+                "message": "Bad Request",
+            },
+        },
+        tags=["Admin Apis"],
+    )
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(
+            {
+                "title": "Student Delete",
+                "message": "User deleted successfully!",
+            },
+            status=200,
+        )
+
 
 @extend_schema_view(
     get=extend_schema(
-        description="My Account Get Api",
+        description="StudentList Api",
         summary="Refer to Schemas At Bottom",
         responses={
             200: OpenApiResponse(
@@ -107,13 +130,40 @@ class StudentListView(generics.ListAPIView):
         )
 
 
+@extend_schema(
+    description="UserDelete Api",
+    summary="Refer to Schemas At Bottom",
+    responses={
+        200: StudentListSerializer,
+        404: {
+            "message": "Bad Request",
+        },
+    },
+    tags=["Admin Apis"],
+)
+class StudentDeleteView(generics.DestroyAPIView):
+    queryset = StudentUser.objects.all()
+    serializer_class = StudentListSerializer
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(
+            {
+                "title": "Student Delete",
+                "message": "User deleted successfully!",
+            },
+            status=200,
+        )
+
+
 @extend_schema_view(
     get=extend_schema(
         description="My Account Get Api",
         summary="Refer to Schemas At Bottom",
         responses={
             200: OpenApiResponse(
-                description="Success Response when Recruiter is created successfully!",
+                description="Success Response when Recruiter is listed successfully!",
             ),
             401: OpenApiResponse(
                 description="Authentication error!",
@@ -134,9 +184,36 @@ class RecruiterListView(generics.ListAPIView):
         response = super().list(request, *args, **kwargs)
         return Response(
             {
-                "title": "Student List",
+                "title": "Recruiter List",
                 "message": "List Fetched Successfully!",
                 "total_recruiter": recruiter_count,
                 "data": response.data,
             }
+        )
+
+
+@extend_schema(
+    description="UserDelete Api",
+    summary="Refer to Schemas At Bottom",
+    responses={
+        200: RecruiterListSerializer,
+        404: {
+            "message": "Bad Request",
+        },
+    },
+    tags=["Admin Apis"],
+)
+class RecruiterDeleteView(generics.DestroyAPIView):
+    queryset = Recruiter.objects.all()
+    serializer_class = RecruiterListSerializer
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(
+            {
+                "title": "Recruiter  Delete",
+                "message": "Recruiter deleted successfully!",
+            },
+            status=200,
         )
