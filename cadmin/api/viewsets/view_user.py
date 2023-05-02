@@ -405,6 +405,5 @@ class ChangePasswordView(generics.CreateAPIView):
             {
                 "title": "Change Password",
                 "message": "Password changed successfully!",
-                "data": response.data,
             }
         )

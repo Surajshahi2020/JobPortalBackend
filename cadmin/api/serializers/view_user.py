@@ -1,3 +1,4 @@
+import signal
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from login.models import StudentUser, Recruiter
@@ -14,13 +15,13 @@ class AdminSerializer(serializers.ModelSerializer):
         ]
 
 
-class ChangePasswordSerializer(serializers.ModelSerializer):
+class BaseChangePasswordSerializer(serializers.ModelSerializer):
     old_password = serializers.CharField(write_only=True, required=True)
     new_password = serializers.CharField(write_only=True, required=True)
     confirm_password = serializers.CharField(write_only=True, required=True)
 
     class Meta:
-        model = User
+        abstract = True
         fields = [
             "old_password",
             "new_password",
@@ -67,6 +68,16 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+
+
+class ChangePasswordSerializer(BaseChangePasswordSerializer):
+    class Meta:
+        model = User
+        fields = [
+            "old_password",
+            "new_password",
+            "confirm_password",
+        ]
 
 
 class StudentListSerializer(serializers.ModelSerializer):

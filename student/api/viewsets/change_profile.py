@@ -11,6 +11,7 @@ from drf_spectacular.utils import (
 
 from student.api.serializers.change_profile import (
     StudentProfileSerializer,
+    StudentPasswordSerializer,
 )
 
 from common.permissions import (
@@ -52,3 +53,32 @@ class ChangeProfileView(generics.UpdateAPIView):
                 }
             )
         return super().update(request, *args, **kwargs)
+
+
+@extend_schema_view(
+    post=extend_schema(
+        description="Change Password Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when password is changed successfully!",
+            ),
+            401: OpenApiResponse(
+                description="Authentication error!",
+            ),
+        },
+        tags=["Student Apis"],
+    ),
+)
+class StudentPasswordView(generics.CreateAPIView):
+    serializer_class = StudentPasswordSerializer
+    permission_classes = [IsAuthenticated]
+
+    def create(self, request, *args, **kwargs):
+        response = super().create(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Student change-password",
+                "message": "Student password changed successfully!",
+            }
+        )

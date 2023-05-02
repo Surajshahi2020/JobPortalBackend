@@ -28,5 +28,5 @@ urlpatterns = [
     path("pending-list/", RecruiterPendingView.as_view()),
     path("acccepted-list/", RecruiterAcceptedView.as_view()),
     path("rejected-list/", RecruiterRejectedView.as_view()),
-    path("change-password/<int:pk>/", ChangePasswordView.as_view()),
+    path("change-password/", ChangePasswordView.as_view()),
 ]

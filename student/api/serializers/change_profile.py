@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from login.models import StudentUser
-from login.api.serializers.registration import (
-    BaseUserCreateSerializer,
+from cadmin.api.serializers.view_user import (
+    BaseChangePasswordSerializer,
 )
 
 from common.utils import (
@@ -39,3 +39,13 @@ class StudentProfileSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         return super().update(instance, validated_data)
+
+
+class StudentPasswordSerializer(BaseChangePasswordSerializer):
+    class Meta:
+        model = StudentUser
+        fields = [
+            "old_password",
+            "new_password",
+            "confirm_password",
+        ]
