@@ -192,7 +192,8 @@ class RecruiterLoginView(generics.CreateAPIView):
                             },
                             status=401,
                         )
-                    if recruiter.is_status:
+
+                    if recruiter.status == "accepted":
                         if user.check_password(data.get("password")):
                             refresh = RefreshToken.for_user(recruiter)
                             refresh.set_exp(lifetime=datetime.timedelta(days=14))
@@ -210,7 +211,7 @@ class RecruiterLoginView(generics.CreateAPIView):
                                         "type": recruiter.type,
                                         "company": recruiter.company,
                                         "is_blocked": recruiter.is_blocked,
-                                        "is_status": recruiter.is_status,
+                                        "status": recruiter.status,
                                         "joined date": joined_date.strftime(
                                             "%Y-%m-%d %H:%M:%S"
                                         ),

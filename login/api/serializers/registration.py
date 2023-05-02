@@ -82,7 +82,7 @@ class RecruiterCreateSerializer(BaseUserCreateSerializer):
         ]
 
     extra_kwargs = {
-        "is_status": {
+        "status": {
             "read_only": True,
         },
     }
@@ -94,7 +94,9 @@ class RecruiterCreateSerializer(BaseUserCreateSerializer):
         user.set_password(password)
         user.save()
 
-        return Recruiter.objects.create(user=user, **validated_data, type="recruiter")
+        return Recruiter.objects.create(
+            user=user, **validated_data, type="recruiter", status="pending"
+        )
 
 
 class AdminCreateSerializer(serializers.ModelSerializer):

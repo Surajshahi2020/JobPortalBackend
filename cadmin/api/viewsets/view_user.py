@@ -1,15 +1,25 @@
 from rest_framework import viewsets, generics
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+
 
 from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiResponse
 from cadmin.api.serializers.view_user import (
     AdminSerializer,
     StudentListSerializer,
     RecruiterListSerializer,
+    ChangePasswordSerializer,
 )
 
 from common.pagination import CustomPagination
+
+from common.permissions import (
+    IsAuthenticated,
+)
+
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 
@@ -20,6 +30,7 @@ from login.models import StudentUser, Recruiter
 class AdminListViewSet(viewsets.ModelViewSet):
     queryset = User.objects.filter(is_staff=True)
     serializer_class = AdminSerializer
+    permission_classes = [IsAuthenticated]
     pagination_class = CustomPagination
     http_method_names = [
         "get",
@@ -113,6 +124,7 @@ class AdminListViewSet(viewsets.ModelViewSet):
 class StudentListView(generics.ListAPIView):
     queryset = StudentUser.objects.all()
     serializer_class = StudentListSerializer
+    permission_classes = [IsAuthenticated]
     pagination_class = CustomPagination
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ["mobile"]
@@ -144,6 +156,7 @@ class StudentListView(generics.ListAPIView):
 class StudentDeleteView(generics.DestroyAPIView):
     queryset = StudentUser.objects.all()
     serializer_class = StudentListSerializer
+    permission_classes = [IsAuthenticated]
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
@@ -175,6 +188,7 @@ class StudentDeleteView(generics.DestroyAPIView):
 class RecruiterListView(generics.ListAPIView):
     queryset = Recruiter.objects.all()
     serializer_class = RecruiterListSerializer
+    permission_classes = [IsAuthenticated]
     pagination_class = CustomPagination
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ["mobile"]
@@ -206,6 +220,7 @@ class RecruiterListView(generics.ListAPIView):
 class RecruiterDeleteView(generics.DestroyAPIView):
     queryset = Recruiter.objects.all()
     serializer_class = RecruiterListSerializer
+    permission_classes = [IsAuthenticated]
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
@@ -216,4 +231,180 @@ class RecruiterDeleteView(generics.DestroyAPIView):
                 "message": "Recruiter deleted successfully!",
             },
             status=200,
+        )
+
+
+@extend_schema(
+    description="ChangeStatus Api",
+    summary="Refer to Schemas At Bottom",
+    responses={
+        200: RecruiterListSerializer,
+        404: {
+            "message": "Bad Request",
+        },
+    },
+    tags=["Admin Apis"],
+)
+class ChangeStatusView(generics.CreateAPIView):
+    queryset = Recruiter.objects.all()
+    serializer_class = RecruiterListSerializer
+    permission_classes = [IsAuthenticated]
+
+    def create(self, request, *args, **kwargs):
+        recruiter_id = kwargs.get("pk")
+        recruiter = Recruiter.objects.get(id=recruiter_id)
+        if recruiter:
+            recruiter.status = "accepted"
+            recruiter.save()
+            return Response(
+                {
+                    "title": "Change status",
+                    "message": "Recruiter status changed successfully!",
+                },
+                status=200,
+            )
+        return Response(
+            {
+                "title": "Change status",
+                "message": "Recruiter does not exist!",
+            },
+            status=422,
+        )
+
+
+@extend_schema_view(
+    get=extend_schema(
+        description="Pending List Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when Recruiter is listed successfully!",
+            ),
+            401: OpenApiResponse(
+                description="Authentication error!",
+            ),
+        },
+        tags=["Admin Apis"],
+    ),
+)
+class RecruiterPendingView(generics.ListAPIView):
+    serializer_class = RecruiterListSerializer
+    pagination_class = CustomPagination
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["mobile"]
+
+    def get_queryset(self):
+        return Recruiter.objects.filter(status="pending")
+
+    def list(self, request, *args, **kwargs):
+        response = super().list(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Pending List",
+                "message": "List Fetched Successfully!",
+                "data": response.data,
+            }
+        )
+
+
+@extend_schema_view(
+    get=extend_schema(
+        description="Accepted List Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when Recruiter is listed successfully!",
+            ),
+            401: OpenApiResponse(
+                description="Authentication error!",
+            ),
+        },
+        tags=["Admin Apis"],
+    ),
+)
+class RecruiterAcceptedView(generics.ListAPIView):
+    serializer_class = RecruiterListSerializer
+    pagination_class = CustomPagination
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["mobile"]
+
+    def get_queryset(self):
+        return Recruiter.objects.filter(status="accepted")
+
+    def list(self, request, *args, **kwargs):
+        response = super().list(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Accepted List",
+                "message": "List Fetched Successfully!",
+                "data": response.data,
+            }
+        )
+
+
+@extend_schema_view(
+    get=extend_schema(
+        description="Rejected List Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when Recruiter is listed successfully!",
+            ),
+            401: OpenApiResponse(
+                description="Authentication error!",
+            ),
+        },
+        tags=["Admin Apis"],
+    ),
+)
+class RecruiterRejectedView(generics.ListAPIView):
+    serializer_class = RecruiterListSerializer
+    pagination_class = CustomPagination
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["mobile"]
+
+    def get_queryset(self):
+        return Recruiter.objects.filter(status="rejected")
+
+    def list(self, request, *args, **kwargs):
+        response = super().list(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Rejected List",
+                "message": "List Fetched Successfully!",
+                "data": response.data,
+            }
+        )
+
+
+@extend_schema_view(
+    post=extend_schema(
+        description="Change Password Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when password is changed successfully!",
+            ),
+            401: OpenApiResponse(
+                description="Authentication error!",
+            ),
+        },
+        tags=["Admin Apis"],
+    ),
+)
+class ChangePasswordView(generics.CreateAPIView):
+    serializer_class = ChangePasswordSerializer
+    permission_classes = [IsAuthenticated]
+
+    def create(self, request, *args, **kwargs):
+        response = super().create(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Change Password",
+                "message": "Password changed successfully!",
+                "data": response.data,
+            }
         )
