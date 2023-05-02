@@ -28,6 +28,7 @@ urlpatterns = [
                 ),
                 path("accounts/", include("login.urls")),
                 path("cadmin/", include("cadmin.urls")),
+                path("student/", include("student.urls")),
             ],
         ),
     ),

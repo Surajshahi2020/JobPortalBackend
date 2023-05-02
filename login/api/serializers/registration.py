@@ -32,6 +32,11 @@ class BaseUserCreateSerializer(serializers.ModelSerializer):
         data = self.initial_data
         mobile = data.get("mobile")
         image = data.get("image")
+        if (
+            StudentUser.objects.filter(mobile=mobile).exists()
+            or Recruiter.objects.filter(mobile=mobile).exists()
+        ):
+            raise serializers.ValidationError("Mobile already linked with user!")
         if "email" not in data:
             raise serializers.ValidationError("Email is required!")
         if User.objects.filter(email=data.get("email")).exists():
@@ -61,6 +66,7 @@ class StudentCreateSerializer(BaseUserCreateSerializer):
     def create(self, validated_data):
         password = validated_data.pop("password")
         email = validated_data.pop("email")
+        mobile = validated_data.pop("mobile")
         user = User(email=email, username=email)
         user.set_password(password)
         user.save()
