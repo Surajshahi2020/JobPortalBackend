@@ -65,7 +65,7 @@ class StudentLoginView(generics.CreateAPIView):
                             status=401,
                         )
                     if user.check_password(data.get("password")):
-                        refresh = RefreshToken.for_user(student)
+                        refresh = RefreshToken.for_user(student.user)
                         refresh.set_exp(lifetime=datetime.timedelta(days=14))
                         access = refresh.access_token
                         access.set_exp(lifetime=datetime.timedelta(days=1))
@@ -195,7 +195,7 @@ class RecruiterLoginView(generics.CreateAPIView):
 
                     if recruiter.status == "accepted":
                         if user.check_password(data.get("password")):
-                            refresh = RefreshToken.for_user(recruiter)
+                            refresh = RefreshToken.for_user(recruiter.user)
                             refresh.set_exp(lifetime=datetime.timedelta(days=14))
                             access = refresh.access_token
                             access.set_exp(lifetime=datetime.timedelta(days=1))

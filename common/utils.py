@@ -1,4 +1,6 @@
 import re
+from datetime import datetime
+from rest_framework.exceptions import ValidationError
 
 
 def validate_number(mobile):
@@ -13,3 +15,11 @@ def validate_image(image):
     if not re.match(pattern, str(image)):
         return False
     return True
+
+
+def validate_date_format(value):
+    try:
+        datetime.strptime(value, "%Y-%m-%d")
+        return value
+    except ValueError:
+        return False

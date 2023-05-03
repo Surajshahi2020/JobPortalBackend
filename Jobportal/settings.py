@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     "django_filters",
     "login",
     "cadmin",
+    "student",
+    "recruiter",
 ]
 
 MIDDLEWARE = [

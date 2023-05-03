@@ -37,7 +37,7 @@ class Job(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
     salary = models.FloatField(max_length=20)
-    image = models.FileField()
+    image = models.FileField(null=True)
     description = models.CharField(max_length=500)
     experience = models.CharField(max_length=50)
     location = models.CharField(max_length=20)
@@ -45,7 +45,7 @@ class Job(models.Model):
     creationdate = models.DateField()
 
     def __str__(self) -> str:
-        return f"{self.title}--{self.slug}"
+        return f"{self.title}"
 
 
 class Apply(models.Model):
