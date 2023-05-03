@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, viewsets
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from login.api.serializers.registration import (
@@ -15,11 +15,14 @@ from drf_spectacular.utils import (
 from common.permissions import (
     IsAuthenticated,
 )
+from common.pagination import CustomPagination
 
 from recruiter.api.serializers.add_job import (
     JobPostSerializer,
 )
 from login.models import Job, Recruiter
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter, OrderingFilter
 
 
 @extend_schema_view(
@@ -52,3 +55,102 @@ class JobPostCreateView(generics.CreateAPIView):
                 "data": response.data,
             }
         )
+
+
+class JobViewSet(viewsets.ModelViewSet):
+    queryset = Job.objects.filter()
+    serializer_class = JobPostSerializer
+    permission_classes = [IsAuthenticated]
+    pagination_class = CustomPagination
+    http_method_names = [
+        "get",
+        "delete",
+        "patch",
+    ]
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_fields = ["title"]
+    search_fields = ["experience"]
+    ordering_fields = ["creationdate"]
+
+    @extend_schema(
+        description="JobList Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: JobPostSerializer,
+            404: {"message": "Bad Request"},
+        },
+        tags=["Recruiter Apis"],
+    )
+    def list(self, request, *args, **kwargs):
+        response = super().list(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Job List",
+                "message": "Job listed successfully",
+                "data": response.data,
+            },
+            200,
+        )
+
+    @extend_schema(
+        description="JobList Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: JobPostSerializer,
+            404: {"message": "Bad Request"},
+        },
+        tags=["Recruiter Apis"],
+        exclude=True,
+    )
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, *args, **kwargs)
+
+    @extend_schema(
+        description="JobDelete Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: JobPostSerializer,
+            404: {"message": "Bad Request"},
+        },
+        tags=["Recruiter Apis"],
+    )
+    def destroy(self, request, *args, **kwargs):
+        job_id = kwargs.get("pk")
+        recruiter = Job.objects.filter(id=job_id).first()
+        if not recruiter:
+            return Response(
+                {
+                    "title": "Job Delete",
+                    "message": "Job does not exist!",
+                },
+                200,
+            )
+        super().destroy(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Job Delete",
+                "message": "Job Deleted Successfully",
+            },
+            200,
+        )
+
+    @extend_schema(
+        description="JobPatch Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: JobPostSerializer,
+            404: {"message": "Bad Request"},
+        },
+        tags=["Recruiter Apis"],
+    )
+    def partial_update(self, request, *args, **kwargs):
+        response = super().partial_update(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Job Update",
+                "message": "Job updated successfully",
+                "data": response.data,
+            }
+        )
+        
+        
