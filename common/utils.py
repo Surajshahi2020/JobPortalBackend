@@ -29,7 +29,12 @@ def validate_date_format(value):
 def validate_resume(value):
     try:
         if value.size > 10 * 1024 * 1024:
-            raise serializers.ValidationError("File size should not exceed 10MB.")
+            raise serializers.ValidationError(
+                {
+                    "title": "Job Apply",
+                    "message": "File size should not exceed 10MB.",
+                }
+            )
         return value
     except AttributeError:
         raise serializers.ValidationError("Invalid file.")

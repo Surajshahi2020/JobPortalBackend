@@ -80,7 +80,9 @@ class JobApplySerializer(serializers.ModelSerializer):
         user = self.context["request"].user
         student = StudentUser.objects.get(user=user)
         job_id = data.get("job")
+        resume = data.get("resume")
         job = Job.objects.filter(id=job_id)
+        validate_resume(resume)
 
         if not all([data.get("job"), data.get("resume")]):
             raise serializers.ValidationError("Job and resume fields are required!")
@@ -94,8 +96,11 @@ class JobApplySerializer(serializers.ModelSerializer):
             )
 
         if Apply.objects.filter(job=job_id, student=student).exists():
-            raise serializers.ValidationError - (
-                "You have already applied for this job."
+            raise serializers.ValidationError(
+                {
+                    "title": " Job Apply",
+                    "message": "You have already applied for this job.",
+                }
             )
 
         super().is_valid(raise_exception=raise_exception)

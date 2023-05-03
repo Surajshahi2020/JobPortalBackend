@@ -111,5 +111,6 @@ class JobApplyView(generics.CreateAPIView):
             {
                 "title": "Job Apply",
                 "message": "Job Applied Successfully!",
+                "data": response.data,
             }
         )
