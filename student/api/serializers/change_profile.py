@@ -1,6 +1,7 @@
 from rest_framework import serializers
-from login.models import StudentUser
+from login.models import StudentUser, Apply, Job
 from django.contrib.auth.models import User
+from datetime import date
 from cadmin.api.serializers.view_user import (
     BaseChangePasswordSerializer,
 )
@@ -8,6 +9,7 @@ from cadmin.api.serializers.view_user import (
 from common.utils import (
     validate_number,
     validate_image,
+    validate_resume,
 )
 from django.db.models import Q
 
@@ -63,3 +65,46 @@ class StudentPasswordSerializer(BaseChangePasswordSerializer):
                 "This User does not exist in Student model!"
             )
         return super().is_valid(raise_exception=raise_exception)
+
+
+class JobApplySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Apply
+        fields = [
+            "resume",
+            "job",
+        ]
+
+    def is_valid(self, *, raise_exception=False):
+        data = self.initial_data
+        user = self.context["request"].user
+        student = StudentUser.objects.get(user=user)
+        job_id = data.get("job")
+        job = Job.objects.filter(id=job_id)
+
+        if not all([data.get("job"), data.get("resume")]):
+            raise serializers.ValidationError("Job and resume fields are required!")
+
+        if not job.exists():
+            raise serializers.ValidationError("Job does not exist!")
+
+        if not student:
+            raise serializers.ValidationError(
+                "This User does not exist in Student model!"
+            )
+
+        if Apply.objects.filter(job=job_id, student=student).exists():
+            raise serializers.ValidationError - (
+                "You have already applied for this job."
+            )
+
+        super().is_valid(raise_exception=raise_exception)
+
+    def create(self, validated_data):
+        user = self.context["request"].user
+        student = StudentUser.objects.get(user=user)
+        job_id = validated_data.get("job")
+
+        return Apply.objects.create(
+            **validated_data, student=student, apply_date=date.today()
+        )

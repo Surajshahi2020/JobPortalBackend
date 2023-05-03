@@ -1,6 +1,7 @@
 import re
 from datetime import datetime
 from rest_framework.exceptions import ValidationError
+from rest_framework import serializers
 
 
 def validate_number(mobile):
@@ -23,3 +24,12 @@ def validate_date_format(value):
         return value
     except ValueError:
         return False
+
+
+def validate_resume(value):
+    try:
+        if value.size > 10 * 1024 * 1024:
+            raise serializers.ValidationError("File size should not exceed 10MB.")
+        return value
+    except AttributeError:
+        raise serializers.ValidationError("Invalid file.")
