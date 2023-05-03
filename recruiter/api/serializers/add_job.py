@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from login.models import Job, Recruiter
+from login.models import Job, Recruiter, Apply
 from common.utils import validate_image, validate_date_format
 from datetime import datetime, date
 from django.contrib.auth.models import User
@@ -69,3 +69,10 @@ class RecruiterPasswordSerializer(BaseChangePasswordSerializer):
                 "This User does not exist in Recruiter model!"
             )
         return super().is_valid(raise_exception=raise_exception)
+
+
+class CandidateListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Apply
+        fields = "__all__"
+        depth = 1

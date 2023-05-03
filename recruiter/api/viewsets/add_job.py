@@ -13,6 +13,7 @@ from drf_spectacular.utils import (
 
 from recruiter.api.serializers.add_job import (
     RecruiterPasswordSerializer,
+    CandidateListSerializer,
 )
 
 
@@ -24,7 +25,7 @@ from common.pagination import CustomPagination
 from recruiter.api.serializers.add_job import (
     JobPostSerializer,
 )
-from login.models import Job, Recruiter
+from login.models import Job, Recruiter, Apply
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 
@@ -162,6 +163,7 @@ class JobViewSet(viewsets.ModelViewSet):
     post=extend_schema(
         description="Change Password Api",
         summary="Refer to Schemas At Bottom",
+        request=RecruiterPasswordSerializer,
         responses={
             200: OpenApiResponse(
                 description="Success Response when password is changed successfully!",
@@ -185,3 +187,32 @@ class RecruiterPasswordView(generics.CreateAPIView):
                 "message": "Recruiter password changed successfully!",
             }
         )
+
+
+@extend_schema_view(
+    get=extend_schema(
+        description="Candidate-Applied List Api",
+        summary="Refer to Schemas At Bottom",
+        request=CandidateListSerializer,
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when list  is fetched successfully!",
+            ),
+            401: OpenApiResponse(
+                description="Authentication error!",
+            ),
+        },
+        tags=["Recruiter Apis"],
+    ),
+)
+class CandidateListView(generics.ListAPIView):
+    queryset = Apply.objects.filter()
+    serializer_class = CandidateListSerializer
+    permission_classes = [IsAuthenticated]
+    pagination_class = CustomPagination
+
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    search_fields = ["experience"]
+
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
