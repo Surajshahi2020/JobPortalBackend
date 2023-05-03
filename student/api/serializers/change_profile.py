@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from login.models import StudentUser
+from django.contrib.auth.models import User
 from cadmin.api.serializers.view_user import (
     BaseChangePasswordSerializer,
 )
@@ -49,3 +50,16 @@ class StudentPasswordSerializer(BaseChangePasswordSerializer):
             "new_password",
             "confirm_password",
         ]
+
+    def is_valid(self, *, raise_exception=False):
+        user = self.context["request"].user
+        if not isinstance(user, User):
+            raise serializers.ValidationError(
+                "User is not a valid instance of User model!"
+            )
+        studentuser = StudentUser.objects.filter(user=user).first()
+        if not studentuser:
+            raise serializers.ValidationError(
+                "This User does not exist in Student model!"
+            )
+        return super().is_valid(raise_exception=raise_exception)

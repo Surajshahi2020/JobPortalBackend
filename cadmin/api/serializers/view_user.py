@@ -79,6 +79,19 @@ class ChangePasswordSerializer(BaseChangePasswordSerializer):
             "confirm_password",
         ]
 
+    def is_valid(self, *, raise_exception=False):
+        user = self.context["request"].user
+        if not isinstance(user, User):
+            raise serializers.ValidationError(
+                "User is not a valid instance of User model!"
+            )
+        if (
+            StudentUser.objects.filter(user=user).exists()
+            or Recruiter.objects.filter(user=user).exists()
+        ):
+            raise serializers.ValidationError("This User does not exist in User model!")
+        return super().is_valid(raise_exception=raise_exception)
+
 
 class StudentListSerializer(serializers.ModelSerializer):
     email = serializers.SerializerMethodField()

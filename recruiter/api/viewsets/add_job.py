@@ -11,6 +11,10 @@ from drf_spectacular.utils import (
     OpenApiResponse,
 )
 
+from recruiter.api.serializers.add_job import (
+    RecruiterPasswordSerializer,
+)
+
 
 from common.permissions import (
     IsAuthenticated,
@@ -152,5 +156,32 @@ class JobViewSet(viewsets.ModelViewSet):
                 "data": response.data,
             }
         )
-        
-        
+
+
+@extend_schema_view(
+    post=extend_schema(
+        description="Change Password Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when password is changed successfully!",
+            ),
+            401: OpenApiResponse(
+                description="Authentication error!",
+            ),
+        },
+        tags=["Recruiter Apis"],
+    ),
+)
+class RecruiterPasswordView(generics.CreateAPIView):
+    serializer_class = RecruiterPasswordSerializer
+    permission_classes = [IsAuthenticated]
+
+    def create(self, request, *args, **kwargs):
+        response = super().create(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Recruiter change-password",
+                "message": "Recruiter password changed successfully!",
+            }
+        )

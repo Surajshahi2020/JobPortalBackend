@@ -2,6 +2,10 @@ from rest_framework import serializers
 from login.models import Job, Recruiter
 from common.utils import validate_image, validate_date_format
 from datetime import datetime, date
+from django.contrib.auth.models import User
+from cadmin.api.serializers.view_user import (
+    BaseChangePasswordSerializer,
+)
 
 
 class JobPostSerializer(serializers.ModelSerializer):
@@ -42,3 +46,26 @@ class JobPostSerializer(serializers.ModelSerializer):
         recruiter = validated_data.pop("recruiter")
         job = Job.objects.create(recruiter=recruiter, **validated_data)
         return job
+
+
+class RecruiterPasswordSerializer(BaseChangePasswordSerializer):
+    class Meta:
+        model = Recruiter
+        fields = [
+            "old_password",
+            "new_password",
+            "confirm_password",
+        ]
+
+    def is_valid(self, *, raise_exception=False):
+        user = self.context["request"].user
+        if not isinstance(user, User):
+            raise serializers.ValidationError(
+                "User is not a valid instance of User model!"
+            )
+        recruiter = Recruiter.objects.filter(user=user).first()
+        if not recruiter:
+            raise serializers.ValidationError(
+                "This User does not exist in Recruiter model!"
+            )
+        return super().is_valid(raise_exception=raise_exception)
