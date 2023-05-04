@@ -4,8 +4,6 @@ from miscellaneous.models import InfoPage
 
 
 class InfoPageSerializer(serializers.ModelSerializer):
-    content = serializers.JSONField(default={})
-
     class Meta:
         model = InfoPage
         fields = [
@@ -17,26 +15,18 @@ class InfoPageSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "slug": {
                 "read_only": True,
-            }
+            },
+            "title": {"validators": []},
         }
 
     def is_valid(self, *, raise_exception=False):
-        data = self.initial_data
-        title = data.get("title")
-        if InfoPage.objects.filter(title=title).exists():
-            raise serializers.ValidationError(
-                {
-                    "title": "Informative Post",
-                    "message": "An info page with this title already exists.",
-                }
-            )
         return super().is_valid(raise_exception=raise_exception)
 
     def create(self, validated_data):
-        content = dict(validated_data.pop("content"))
-        return super().create(
-            {
-                **validated_data,
-                "content": content,
-            }
-        )
+        title = validated_data.get("title")
+        inf = InfoPage.objects.filter(title=title)
+        if inf.exists():
+            inf.update(**validated_data)
+            return inf.first()
+        
+        return super().create(validated_data)

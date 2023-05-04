@@ -6,3 +6,11 @@
 2023-05-04 11:21:05 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 85
 2023-05-04 11:23:50 WARNING django.request Bad Request: /api/v1/miscellaneous/info/
 2023-05-04 11:23:50 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 85
+2023-05-04 11:35:32 WARNING django.request Unauthorized: /api/v1/miscellaneous/info/
+2023-05-04 11:35:32 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 401 57
+2023-05-04 11:35:42 WARNING django.request Bad Request: /api/v1/miscellaneous/info/
+2023-05-04 11:35:42 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 85
+2023-05-04 11:35:54 WARNING django.request Bad Request: /api/v1/miscellaneous/info/
+2023-05-04 11:35:54 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 85
+2023-05-04 11:39:08 WARNING django.request Bad Request: /api/v1/miscellaneous/info/
+2023-05-04 11:39:08 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 55
