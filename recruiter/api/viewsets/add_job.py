@@ -1,6 +1,6 @@
 from rest_framework import generics, viewsets
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
+
 from login.api.serializers.registration import (
     RecruiterCreateSerializer,
 )
@@ -19,6 +19,9 @@ from recruiter.api.serializers.add_job import (
 
 from common.permissions import (
     IsAuthenticated,
+    IsRecruiter,
+    IsStudent,
+    method_permission_classes,
 )
 from common.pagination import CustomPagination
 
@@ -65,7 +68,6 @@ class JobPostCreateView(generics.CreateAPIView):
 class JobViewSet(viewsets.ModelViewSet):
     queryset = Job.objects.filter()
     serializer_class = JobPostSerializer
-    permission_classes = [IsAuthenticated]
     pagination_class = CustomPagination
     http_method_names = [
         "get",
@@ -73,7 +75,7 @@ class JobViewSet(viewsets.ModelViewSet):
         "patch",
     ]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ["title"]
+    filterset_fields = ["title", "recruiter"]
     search_fields = ["experience"]
     ordering_fields = ["creationdate"]
 
@@ -87,12 +89,20 @@ class JobViewSet(viewsets.ModelViewSet):
         tags=["Recruiter Apis"],
     )
     def list(self, request, *args, **kwargs):
-        response = super().list(request, *args, **kwargs)
+        queryset = self.filter_queryset(self.get_queryset())
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            serializer = self.get_paginated_response(serializer.data)
+        else:
+            serializer = self.get_serializer(queryset, many=True)
+
         return Response(
             {
                 "title": "Job List",
                 "message": "Job listed successfully",
-                "data": response.data,
+                "data": serializer.data,
             },
             200,
         )
@@ -119,6 +129,7 @@ class JobViewSet(viewsets.ModelViewSet):
         },
         tags=["Recruiter Apis"],
     )
+    @method_permission_classes([IsRecruiter])
     def destroy(self, request, *args, **kwargs):
         job_id = kwargs.get("pk")
         recruiter = Job.objects.filter(id=job_id).first()
@@ -148,6 +159,7 @@ class JobViewSet(viewsets.ModelViewSet):
         },
         tags=["Recruiter Apis"],
     )
+    @method_permission_classes([IsRecruiter])
     def partial_update(self, request, *args, **kwargs):
         response = super().partial_update(request, *args, **kwargs)
         return Response(
@@ -177,7 +189,7 @@ class JobViewSet(viewsets.ModelViewSet):
 )
 class RecruiterPasswordView(generics.CreateAPIView):
     serializer_class = RecruiterPasswordSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsRecruiter]
 
     def create(self, request, *args, **kwargs):
         response = super().create(request, *args, **kwargs)
@@ -208,11 +220,30 @@ class RecruiterPasswordView(generics.CreateAPIView):
 class CandidateListView(generics.ListAPIView):
     queryset = Apply.objects.filter()
     serializer_class = CandidateListSerializer
-    permission_classes = [IsAuthenticated]
     pagination_class = CustomPagination
 
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_fields = ["job"]
     search_fields = ["experience"]
 
+    @method_permission_classes([IsRecruiter])
     def list(self, request, *args, **kwargs):
-        return super().list(request, *args, **kwargs)
+        # reset_queries()
+        queryset = self.filter_queryset(self.get_queryset()).filter(
+            job__recruiter__user=request.user
+        )
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            serializer = self.get_paginated_response(serializer.data)
+        else:
+            serializer = self.get_serializer(queryset, many=True)
+
+        return Response(
+            {
+                "title": "Candidates List",
+                "message": "Candidates listed successfully",
+                "data": serializer.data,
+            },
+            200,
+        )
