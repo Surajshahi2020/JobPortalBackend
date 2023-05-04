@@ -52,6 +52,20 @@ def validate_image(image):
     return True
 
 
+def validate_aimage(image):
+    url_pattern = (
+        "((http|https)://)(www.)?"
+        + "[a-zA-Z0-9@:%._\\+~#?&//=]"
+        + "{2,256}\\.[a-z]"
+        + "{2,6}\\b([-a-zA-Z0-9@:%"
+        + "._\\+~#?&//=]*)"
+    )
+    p = re.compile(url_pattern)
+    if re.search(p, image):
+        return True
+    return False
+
+
 def validate_date_format(value):
     try:
         datetime.strptime(value, "%Y-%m-%d")

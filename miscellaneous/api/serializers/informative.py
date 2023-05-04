@@ -1,6 +1,9 @@
 from rest_framework import serializers
 
 from miscellaneous.models import InfoPage
+from common.utils import (
+    validate_aimage,
+)
 
 
 class InfoPageSerializer(serializers.ModelSerializer):
@@ -20,6 +23,9 @@ class InfoPageSerializer(serializers.ModelSerializer):
         }
 
     def is_valid(self, *, raise_exception=False):
+        contents = self.initial_data.get("content", {})
+        if "image" in contents and not validate_aimage(contents["image"]):
+            raise serializers.ValidationError("Please enter the image in format!")
         return super().is_valid(raise_exception=raise_exception)
 
     def create(self, validated_data):
@@ -28,5 +34,5 @@ class InfoPageSerializer(serializers.ModelSerializer):
         if inf.exists():
             inf.update(**validated_data)
             return inf.first()
-        
+
         return super().create(validated_data)
