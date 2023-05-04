@@ -228,7 +228,6 @@ class CandidateListView(generics.ListAPIView):
 
     @method_permission_classes([IsRecruiter])
     def list(self, request, *args, **kwargs):
-        # reset_queries()
         queryset = self.filter_queryset(self.get_queryset()).filter(
             job__recruiter__user=request.user
         )

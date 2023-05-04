@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os, datetime
 from datetime import timedelta
 from dotenv import load_dotenv
 
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     "cadmin",
     "student",
     "recruiter",
+    "miscellaneous",
 ]
 
 MIDDLEWARE = [
@@ -148,6 +149,7 @@ SPECTACULAR_SETTINGS = {
     "DESCRIPTION": "Job Portal All Apis",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
+    "COMPONENT_SPLIT_REQUEST": True,
 }
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
@@ -165,4 +167,45 @@ MEDIA_URL = "/media/"
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=1440),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1 * 14),
+}
+
+
+if not os.path.exists(BASE_DIR / "logs"):
+    os.mkdir(BASE_DIR / "logs")
+LOGGING = {
+    "version": 1,
+    # The version number of our log
+    "disable_existing_loggers": False,
+    # django uses some of its own loggers for internal operations. In case you want to disable them just replace the False above with true.
+    # A handler for WARNING. It is basically writing the WARNING messages into a file called WARNING.log
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "myformatter",
+        },
+        "file": {
+            "level": "WARNING",
+            "class": "logging.FileHandler",
+            "filename": BASE_DIR / f"logs/{datetime.date.today()}-warning.log",
+            "formatter": "myformatter",
+        },
+    },
+    "formatters": {
+        "myformatter": {
+            "format": "%(asctime)s %(levelname)s %(name)s %(message)s",
+            "datefmt": "%Y-%m-%d %H:%M:%S",
+        },
+    },
+    # A logger for WARNING which has a handler called 'file'. A logger can have multiple handler
+    "loggers": {
+        # notice the blank '', Usually you would put built in loggers like django or root here based on your needs
+        "django": {
+            "handlers": [
+                "file",
+                "console",
+            ],  # notice how file variable is called in handler which has been defined above
+            "level": "WARNING",
+            "propagate": True,
+        },
+    },
 }

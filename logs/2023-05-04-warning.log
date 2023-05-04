@@ -1,0 +1,8 @@
+2023-05-04 11:07:05 WARNING django.request Bad Request: /api/v1/miscellaneous/info/
+2023-05-04 11:07:05 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 85
+2023-05-04 11:18:04 WARNING django.request Not Found: /media/common/1683199065511823.png
+2023-05-04 11:18:04 WARNING django.server "GET /media/common/1683199065511823.png HTTP/1.1" 404 2289
+2023-05-04 11:21:05 WARNING django.request Bad Request: /api/v1/miscellaneous/info/
+2023-05-04 11:21:05 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 85
+2023-05-04 11:23:50 WARNING django.request Bad Request: /api/v1/miscellaneous/info/
+2023-05-04 11:23:50 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 85

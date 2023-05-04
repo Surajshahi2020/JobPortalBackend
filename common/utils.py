@@ -2,6 +2,40 @@ import re
 from datetime import datetime
 from rest_framework.exceptions import ValidationError
 from rest_framework import serializers
+from django.utils.text import slugify
+import string, random, re
+
+
+PANEL_CHOICES = (
+    ("Ab", "About Us"),
+    ("Pr", "Privacy  and Policy"),
+    ("Te", "Terms & Conditions"),
+    ("Co", "Contact"),
+    ("Na", "Navigation Bar"),
+    ("Nl", "Navigation Logo"),
+    ("Lc", "Location"),
+    ("So", "Social account"),
+    ("Fa", "FAQ / Help"),
+    ("Fo", "Footer content"),
+    ("Fg", "Footer logo"),
+    ("Br", "Browse Job Logo"),
+    ("No", "Notice"),
+    ("E1", "Extra 1"),
+    ("E2", "Extra 2"),
+    ("E3", "Extra 3"),
+)
+
+
+def random_string_generator(size=10, chars=string.ascii_lowercase + string.digits):
+    return "".join(random.choice(chars) for _ in range(size))
+
+
+def TitleFieldSlug(instance):
+    slug = slugify(instance.title[:50])
+    Klass = instance.__class__
+    if Klass.objects.filter(slug=slug).exists():
+        slug = slug + "-" + random_string_generator(size=4)
+    return slug
 
 
 def validate_number(mobile):
