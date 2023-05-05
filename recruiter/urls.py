@@ -5,6 +5,7 @@ from recruiter.api.viewsets.add_job import (
     JobViewSet,
     RecruiterPasswordView,
     CandidateListView,
+    RecruiterProfileView,
 )
 from rest_framework import routers
 
@@ -19,4 +20,5 @@ urlpatterns = [
     path("job-post/", JobPostCreateView.as_view()),
     path("change-password/", RecruiterPasswordView.as_view()),
     path("candidate-applied/", CandidateListView.as_view()),
+    path("change-profile/<int:pk>/", RecruiterProfileView.as_view()),
 ]

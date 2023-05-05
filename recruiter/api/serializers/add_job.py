@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from login.models import Job, Recruiter, Apply
-from common.utils import validate_image, validate_date_format
+from common.utils import validate_image, validate_date_format, validate_number
 from datetime import datetime, date
 from django.contrib.auth.models import User
 from cadmin.api.serializers.view_user import (
@@ -76,3 +76,63 @@ class CandidateListSerializer(serializers.ModelSerializer):
         model = Apply
         fields = "__all__"
         # depth = 1
+
+
+class RecruiterProfileSerializer(serializers.ModelSerializer):
+    email = serializers.CharField(write_only=True)
+
+    class Meta:
+        model = Recruiter
+        fields = [
+            "image",
+            "mobile",
+            "gender",
+            "type",
+            "company",
+            "email",
+        ]
+
+    def is_valid(self, *, raise_exception=False):
+        data = self.initial_data
+        email = data.get("email")
+        mobile = Recruiter.objects.exclude(id=self.instance.id).filter(
+            mobile=data.get("mobile")
+        )
+        if mobile.exists():
+            raise serializers.ValidationError(
+                {
+                    "title": "Recriter Profile",
+                    "message": "Mobile number already linked with another user!",
+                }
+            )
+        if User.objects.exclude(id=self.instance.user.id).filter(email=email).exists():
+            raise serializers.ValidationError(
+                {
+                    "title": "Recruiter Profile",
+                    "message": "Email already exists",
+                }
+            )
+        if "mobile" in data and not validate_number(data.get("mobile")):
+            raise serializers.ValidationError(
+                {
+                    "title": "Recruiter Profile",
+                    "message": "Please enter a valid mobile number!",
+                },
+            )
+
+        if "image" in data and not validate_image(data.get("image")):
+            raise serializers.ValidationError(
+                {
+                    "title": "Recruiter Profile",
+                    "message": "Please enter a valid url for image!",
+                },
+            )
+
+        return super().is_valid(raise_exception=raise_exception)
+
+    def update(self, instance, validated_data):
+        email = validated_data.get("email")
+        instance.user.email = email
+        instance.user.username = email
+        instance.user.save()
+        return super().update(instance, validated_data)

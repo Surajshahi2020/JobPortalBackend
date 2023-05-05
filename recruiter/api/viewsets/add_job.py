@@ -14,6 +14,7 @@ from drf_spectacular.utils import (
 from recruiter.api.serializers.add_job import (
     RecruiterPasswordSerializer,
     CandidateListSerializer,
+    RecruiterProfileSerializer,
 )
 
 
@@ -246,3 +247,37 @@ class CandidateListView(generics.ListAPIView):
             },
             200,
         )
+
+
+@extend_schema_view(
+    patch=extend_schema(
+        description="RecruiterProfile Api",
+        summary="Refer to Schemas At Bottom",
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when profile is changed successfully!",
+            ),
+            401: OpenApiResponse(
+                description="Authentication error!",
+            ),
+        },
+        tags=["Recruiter Apis"],
+    ),
+)
+class RecruiterProfileView(generics.UpdateAPIView):
+    queryset = Recruiter.objects.all()
+    serializer_class = RecruiterProfileSerializer
+    permission_classes = [IsRecruiter]
+    http_method_names = [
+        "patch",
+    ]
+
+    def update(self, request, *args, **kwargs):
+        if not Recruiter.objects.filter(id=kwargs.get("pk")).exists():
+            return Response(
+                {
+                    "title": "Profile update",
+                    "messaage": "Recruiter doesnot exist!",
+                }
+            )
+        return super().update(request, *args, **kwargs)

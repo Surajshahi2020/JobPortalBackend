@@ -148,3 +148,9 @@ AttributeError: 'dict' object has no attribute 'content'
 2023-05-04 12:08:31 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 37
 2023-05-04 12:11:48 WARNING django.request Bad Request: /api/v1/miscellaneous/info/
 2023-05-04 12:11:48 WARNING django.server "POST /api/v1/miscellaneous/info/ HTTP/1.1" 400 37
+2023-05-04 18:17:32 WARNING django.request Not Found: /
+2023-05-04 18:17:32 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-04 18:17:32 WARNING django.request Not Found: /favicon.ico
+2023-05-04 18:17:32 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-04 18:18:44 WARNING django.request Unauthorized: /api/v1/miscellaneous/info/
+2023-05-04 18:18:44 WARNING django.server "GET /api/v1/miscellaneous/info/ HTTP/1.1" 401 57
