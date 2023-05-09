@@ -1,0 +1,194 @@
+2023-05-06 05:20:23 WARNING django.request Not Found: /
+2023-05-06 05:20:23 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-06 05:20:23 WARNING django.request Not Found: /favicon.ico
+2023-05-06 05:20:23 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-06 05:21:43 WARNING django.request Not Found: /favicon.ico
+2023-05-06 05:21:43 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-06 08:58:32 WARNING django.request Not Found: /
+2023-05-06 08:58:32 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-06 14:29:46 WARNING django.request Not Found: /
+2023-05-06 14:29:46 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-06 14:29:46 WARNING django.request Not Found: /favicon.ico
+2023-05-06 14:29:46 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-06 17:23:48 WARNING django.request Not Found: /
+2023-05-06 17:23:48 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-06 17:33:42 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:33:42 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 42
+2023-05-06 17:35:52 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:35:52 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 17:36:04 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:36:04 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 42
+2023-05-06 17:38:00 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:38:00 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 42
+2023-05-06 17:38:02 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:38:02 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 42
+2023-05-06 17:38:11 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:38:11 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 17:41:30 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:41:30 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:41:37 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:41:37 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 17:41:46 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:41:46 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 17:43:08 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:43:08 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:46:59 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:46:59 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:47:16 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:47:16 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:48:16 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:48:16 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:48:17 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:48:17 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:48:18 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:48:18 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:48:19 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:48:19 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:49:20 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:49:20 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:51:52 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:51:52 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 17:51:53 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 17:51:53 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:03:57 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:03:57 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:05:06 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:05:06 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:10:56 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:10:56 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:11:08 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:11:08 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:11:09 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:11:09 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:11:09 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:11:09 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:13:50 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:13:50 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:13:52 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:13:52 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:13:53 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:13:53 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:16:10 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:16:10 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:16:12 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:16:12 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:16:12 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:16:12 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:16:14 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:16:14 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:16:33 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:16:33 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 41
+2023-05-06 18:19:53 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:19:53 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:19:58 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:19:58 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:19:59 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:19:59 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:00 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:00 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:01 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:01 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:01 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:01 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:01 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:01 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:01 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:01 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:01 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:01 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:01 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:01 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:02 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:02 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:02 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:02 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:02 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:02 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:03 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:03 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:03 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:03 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:03 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:03 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:03 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:03 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:03 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:03 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:04 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:04 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:04 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:04 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:04 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:04 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:04 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:04 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:04 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:04 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:05 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:05 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:05 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:05 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:05 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:05 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:05 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:05 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:06 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:06 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:29 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:29 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:30 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:30 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 36
+2023-05-06 18:20:37 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:37 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 42
+2023-05-06 18:20:38 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:20:38 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 42
+2023-05-06 18:24:10 WARNING django.request Not Found: /
+2023-05-06 18:24:10 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-06 18:36:25 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:36:25 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 18:36:41 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:36:41 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 75
+2023-05-06 18:37:39 WARNING django.request Not Found: /db/admina
+2023-05-06 18:37:39 WARNING django.server "GET /db/admina HTTP/1.1" 404 2470
+2023-05-06 18:42:23 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:42:23 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 18:45:13 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:45:13 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 18:52:31 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:52:31 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 18:53:15 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:53:15 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 18:53:17 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 18:53:17 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:02:04 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:02:04 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:02:07 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:02:07 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:02:08 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:02:08 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:02:09 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:02:09 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:02:40 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:02:40 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:02:42 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:02:42 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:10:44 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:10:44 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:10:47 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:10:47 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:10:48 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:10:48 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:11:13 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:11:13 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 72
+2023-05-06 19:16:26 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:16:26 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 72
+2023-05-06 19:16:27 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:16:27 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 72
+2023-05-06 19:16:41 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:16:41 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 72
+2023-05-06 19:17:53 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:17:53 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:25:40 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:25:40 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-06 19:39:09 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-06 19:39:09 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 72

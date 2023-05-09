@@ -9,7 +9,7 @@ from login.models import (
     Job,
     Apply,
 )
-from common.utils import validate_number, validate_image
+from common.utils import validate_number, validate_image, validate_password
 from login.models import StudentUser, Recruiter
 
 
@@ -36,17 +36,42 @@ class BaseUserCreateSerializer(serializers.ModelSerializer):
             StudentUser.objects.filter(mobile=mobile).exists()
             or Recruiter.objects.filter(mobile=mobile).exists()
         ):
-            raise serializers.ValidationError("Mobile already linked with user!")
+            raise serializers.ValidationError(
+                {
+                    "title": "Account Registration",
+                    "message": "Mobile already linked with user!",
+                }
+            )
         if "email" not in data:
             raise serializers.ValidationError("Email is required!")
         if User.objects.filter(email=data.get("email")).exists():
-            raise serializers.ValidationError("User with this Email already exists !")
+            raise serializers.ValidationError(
+                {
+                    "title": "Account Registration",
+                    "message": "User with this Email already exists !",
+                }
+            )
         if "mobile" not in data:
-            raise serializers.ValidationError("Mobile number is required")
+            raise serializers.ValidationError(
+                {
+                    "title": "Account Registration",
+                    "message": "Mobile number is required",
+                }
+            )
         if not validate_number(mobile):
-            raise serializers.ValidationError(" Please enter the valid mobile numbers")
+            raise serializers.ValidationError(
+                {
+                    "title": "Account Registration",
+                    "message": "Please enter the valid mobile numbers",
+                }
+            )
         if "image" in data and not validate_image(image):
-            raise serializers.ValidationError("Please enter a valid url for image!")
+            raise serializers.ValidationError(
+                {
+                    "title": "Account Registration",
+                    "message": "Please enter a valid url for image!",
+                }
+            )
 
         return super().is_valid(raise_exception=raise_exception)
 
@@ -63,10 +88,29 @@ class StudentCreateSerializer(BaseUserCreateSerializer):
             "gender",
         ]
 
+    def is_valid(self, *, raise_exception=False):
+        data = self.initial_data
+        password = data.get("password")
+        if not password or not validate_password(password):
+            raise serializers.ValidationError(
+                {
+                    "title": "Account Registration",
+                    "message": "Password cannot be blank",
+                }
+            )
+        elif len(password) < 7:
+            raise serializers.ValidationError(
+                {
+                    "title": "Account Registration",
+                    "message": "Password should be at least 7 characters long",
+                }
+            )
+
+        return super().is_valid(raise_exception=raise_exception)
+
     def create(self, validated_data):
-        password = validated_data.pop("password")
         email = validated_data.pop("email")
-        mobile = validated_data.pop("mobile")
+        password = validated_data.pop("password")
         user = User(email=email, username=email)
         user.set_password(password)
         user.save()

@@ -43,8 +43,8 @@ class StudentAccountCreateView(generics.CreateAPIView):
         response = super().create(request, *args, **kwargs)
         return Response(
             {
-                "title": "Accounts Create",
-                "message": "StudentUser Account Created Successfully!",
+                "title": "Account Create",
+                "message": "Student Account  Created Successfully!",
                 "data": response.data,
             }
         )
@@ -74,7 +74,7 @@ class RecruiterAccountCreateView(generics.CreateAPIView):
         response = super().create(request, *args, **kwargs)
         return Response(
             {
-                "title": "Accounts Create",
+                "title": "Account Create",
                 "message": "Recruiter Account Created Successfully!",
                 "data": response.data,
             }

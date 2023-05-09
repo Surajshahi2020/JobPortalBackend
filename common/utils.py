@@ -45,6 +45,18 @@ def validate_number(mobile):
     return True
 
 
+def validate_password(password):
+    pattern = r"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+    if not re.match(pattern, password):
+        raise serializers.ValidationError(
+            {
+                "title": "Account Registration",
+                "message": "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character",
+            }
+        )
+    return password
+
+
 def validate_image(image):
     pattern = r"^(?:.*\.(jpg|jpeg|png|gif))$"
     if not re.match(pattern, str(image)):

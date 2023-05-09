@@ -59,8 +59,8 @@ class StudentLoginView(generics.CreateAPIView):
                     if student.is_blocked:
                         return Response(
                             {
-                                "title": "Account Login",
-                                "message": "Account Blocked !",
+                                "title": "Student Login",
+                                "message": "Student Account Blocked !",
                             },
                             status=401,
                         )
@@ -71,8 +71,8 @@ class StudentLoginView(generics.CreateAPIView):
                         access.set_exp(lifetime=datetime.timedelta(days=1))
                         return Response(
                             {
-                                "title": "Account Login",
-                                "message": "Logged in successfully !",
+                                "title": "Student Login",
+                                "message": "Student Logged in successfully !",
                                 "data": {
                                     "mobile": student.mobile,
                                     "gender": student.gender,
@@ -88,30 +88,30 @@ class StudentLoginView(generics.CreateAPIView):
                         )
                     return Response(
                         {
-                            "title": "Login",
-                            "message": "Password incorrect !",
+                            "title": "Student Login",
+                            "message": "Student Password incorrect !",
                         },
                         status=422,
                     )
                 return Response(
                     {
-                        "title": "Login",
-                        "message": "Password incorrect !",
+                        "title": "Student Login",
+                        "message": "Invalid User !",
                     },
                     status=422,
                 )
 
             return Response(
                 {
-                    "title": "Login",
-                    "message": "Email does not linked with user!!",
+                    "title": "Student Login",
+                    "message": "Email does not linked with student model!!",
                 },
                 status=422,
             )
         return Response(
             {
-                "title": "Login",
-                "message": "Email does not linked with user!",
+                "title": "Student Login",
+                "message": "Email does not linked with user model!",
             },
             status=422,
         )
@@ -188,7 +188,7 @@ class RecruiterLoginView(generics.CreateAPIView):
                         return Response(
                             {
                                 "title": "Recruiter Login",
-                                "message": "Account Blocked !",
+                                "message": "Recriter Account Blocked !",
                             },
                             status=401,
                         )
@@ -202,8 +202,8 @@ class RecruiterLoginView(generics.CreateAPIView):
                             joined_date = recruiter.user.date_joined
                             return Response(
                                 {
-                                    "title": "Account Login",
-                                    "message": "Logged in successfully !",
+                                    "title": "Recruiter Login",
+                                    "message": "Recruiter Logged in successfully !",
                                     "data": {
                                         "mobile": recruiter.mobile,
                                         "gender": recruiter.gender,
@@ -223,21 +223,21 @@ class RecruiterLoginView(generics.CreateAPIView):
                             )
                         return Response(
                             {
-                                "title": "Account Login",
-                                "message": "Incorrect password !",
+                                "title": "Recruiter Login",
+                                "message": "Recruiter Incorrect password !",
                             },
                             status=422,
                         )
                     return Response(
                         {
-                            "title": "Account Login",
-                            "message": "Pending !",
+                            "title": "Recruiter Login",
+                            "message": "Recruiter account is in Pending !",
                         },
                         status=422,
                     )
                 return Response(
                     {
-                        "title": "Account Login",
+                        "title": "Recruiter Login",
                         "message": "Only Recruiter can login!",
                     },
                     status=422,
@@ -247,7 +247,7 @@ class RecruiterLoginView(generics.CreateAPIView):
                 return Response(
                     {
                         "title": "Recruiter Login",
-                        "message": "Email doesnot linked with user!!",
+                        "message": "Email doesnot linked with Recruiter model!!",
                     },
                     status=422,
                 )
@@ -255,7 +255,7 @@ class RecruiterLoginView(generics.CreateAPIView):
             return Response(
                 {
                     "title": "Recruiter Login",
-                    "message": "Email does not linked with user!",
+                    "message": "Email does not linked with user model!",
                 },
                 status=422,
             )

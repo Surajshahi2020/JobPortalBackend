@@ -9,10 +9,18 @@ from cadmin.api.serializers.view_user import (
 
 
 class JobPostSerializer(serializers.ModelSerializer):
+    company = serializers.SerializerMethodField()
+
+    def get_company(self, obj: Job):
+        if obj.recruiter:
+            return obj.recruiter.company
+        return ""
+
     class Meta:
         model = Job
         exclude = [
             "slug",
+            "recruiter",
         ]
 
     def is_valid(self, *, raise_exception=False):

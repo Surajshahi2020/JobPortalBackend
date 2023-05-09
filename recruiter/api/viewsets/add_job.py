@@ -104,6 +104,7 @@ class JobViewSet(viewsets.ModelViewSet):
                 "title": "Job List",
                 "message": "Job listed successfully",
                 "data": serializer.data,
+                # "jobtitle": seria
             },
             200,
         )
@@ -280,4 +281,11 @@ class RecruiterProfileView(generics.UpdateAPIView):
                     "messaage": "Recruiter doesnot exist!",
                 }
             )
-        return super().update(request, *args, **kwargs)
+        response = super().update(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Recruiter Profile",
+                "message": "Profie changed successfully",
+                "data": response.data,
+            }
+        )
