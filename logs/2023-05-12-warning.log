@@ -1,0 +1,368 @@
+2023-05-12 03:14:06 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:14:06 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-12 03:28:50 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:28:50 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-12 03:29:09 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:29:09 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-12 03:29:10 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:29:10 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-12 03:29:10 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:29:10 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-12 03:29:10 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:29:10 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-12 03:29:11 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:29:11 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-12 03:35:02 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:35:02 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-12 03:35:04 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:35:04 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-12 03:35:04 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:35:04 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-12 03:35:04 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:35:04 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-12 03:35:10 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:35:10 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-12 03:35:23 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:35:23 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-12 03:41:23 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-12 03:41:23 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-12 04:07:18 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:07:18 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:07:39 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:07:39 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:08:00 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:08:00 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:08:07 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:08:07 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:14:39 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:14:39 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:20:45 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:20:45 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:23:25 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:23:25 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:23:43 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:23:43 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:30:05 ERROR django.request Internal Server Error: /api/v1/accounts/recruiter-login/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/login/api/viewsets/login.py", line 220, in create
+    **UserSerializer(data=recruiter.user).data,
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+2023-05-12 04:30:05 ERROR django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 500 119910
+2023-05-12 04:30:18 ERROR django.request Internal Server Error: /api/v1/accounts/recruiter-login/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/login/api/viewsets/login.py", line 220, in create
+    **UserSerializer(data=recruiter.user).data,
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+2023-05-12 04:30:18 ERROR django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 500 119910
+2023-05-12 04:30:20 ERROR django.request Internal Server Error: /api/v1/accounts/recruiter-login/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/login/api/viewsets/login.py", line 220, in create
+    **UserSerializer(data=recruiter.user).data,
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+2023-05-12 04:30:20 ERROR django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 500 119910
+2023-05-12 04:30:39 ERROR django.request Internal Server Error: /api/v1/accounts/recruiter-login/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/login/api/viewsets/login.py", line 220, in create
+    **UserSerializer(data=recruiter.user).data,
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+2023-05-12 04:30:39 ERROR django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 500 119910
+2023-05-12 04:31:48 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:31:48 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:32:14 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:32:14 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:32:34 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:32:34 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:35:35 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:35:35 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:35:39 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:35:39 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:35:51 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:35:51 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:37:58 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:37:58 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:38:23 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:38:23 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:39:19 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:39:19 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:39:22 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:39:22 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:39:25 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:39:25 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:39:43 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:39:43 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:40:22 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:40:22 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:40:38 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:40:38 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:40:42 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:40:42 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:40:48 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:40:48 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:40:52 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:40:52 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:41:15 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:41:15 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:41:19 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:41:19 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:41:29 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:41:29 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:42:35 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:42:35 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:42:37 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:42:37 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:42:46 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:42:46 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:42:49 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:42:49 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:42:53 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:42:53 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:42:56 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:42:56 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:42:59 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:42:59 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:43:05 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:43:05 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:43:07 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-12 04:43:07 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-12 04:43:55 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:43:55 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:43:56 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:43:56 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:43:57 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:43:57 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:43:57 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:43:57 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:43:58 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:43:58 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:43:58 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:43:58 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:43:59 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:43:59 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:43:59 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:43:59 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:43:59 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-12 04:43:59 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-12 04:50:50 WARNING django.request Unauthorized: /api/v1/student/change-profile/76/
+2023-05-12 04:50:50 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 401 57
+2023-05-12 04:52:04 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 04:52:04 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 85
+2023-05-12 04:52:17 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 04:52:18 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 85
+2023-05-12 04:53:37 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 04:53:37 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 85
+2023-05-12 04:54:44 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 04:54:44 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 85
+2023-05-12 04:54:53 WARNING django.request Not Found: /favicon.ico
+2023-05-12 04:54:53 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-12 05:16:26 WARNING django.request Not Found: /api/v1/student/change-profile/undefined/
+2023-05-12 05:16:26 WARNING django.server "PATCH /api/v1/student/change-profile/undefined/ HTTP/1.1" 404 4328
+2023-05-12 05:16:28 WARNING django.request Not Found: /api/v1/student/change-profile/undefined/
+2023-05-12 05:16:28 WARNING django.server "PATCH /api/v1/student/change-profile/undefined/ HTTP/1.1" 404 4328
+2023-05-12 05:16:29 WARNING django.request Not Found: /api/v1/student/change-profile/undefined/
+2023-05-12 05:16:29 WARNING django.server "PATCH /api/v1/student/change-profile/undefined/ HTTP/1.1" 404 4328
+2023-05-12 05:16:29 WARNING django.request Not Found: /api/v1/student/change-profile/undefined/
+2023-05-12 05:16:29 WARNING django.server "PATCH /api/v1/student/change-profile/undefined/ HTTP/1.1" 404 4328
+2023-05-12 05:16:30 WARNING django.request Not Found: /api/v1/student/change-profile/undefined/
+2023-05-12 05:16:30 WARNING django.server "PATCH /api/v1/student/change-profile/undefined/ HTTP/1.1" 404 4328
+2023-05-12 05:16:30 WARNING django.request Not Found: /api/v1/student/change-profile/undefined/
+2023-05-12 05:16:30 WARNING django.server "PATCH /api/v1/student/change-profile/undefined/ HTTP/1.1" 404 4328
+2023-05-12 05:16:34 WARNING django.request Not Found: /api/v1/student/change-profile/undefined/
+2023-05-12 05:16:34 WARNING django.server "PATCH /api/v1/student/change-profile/undefined/ HTTP/1.1" 404 4328
+2023-05-12 05:16:50 WARNING django.request Not Found: /api/v1/student/change-profile/undefined/
+2023-05-12 05:16:50 WARNING django.server "PATCH /api/v1/student/change-profile/undefined/ HTTP/1.1" 404 4328
+2023-05-12 05:16:51 WARNING django.request Not Found: /api/v1/student/change-profile/undefined/
+2023-05-12 05:16:51 WARNING django.server "PATCH /api/v1/student/change-profile/undefined/ HTTP/1.1" 404 4328
+2023-05-12 05:59:48 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 05:59:48 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 75
+2023-05-12 05:59:53 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 05:59:53 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 75
+2023-05-12 06:00:15 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 06:00:15 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 75
+2023-05-12 06:00:19 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 06:00:19 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 75
+2023-05-12 06:02:55 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 06:02:55 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 75
+2023-05-12 06:21:59 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 06:21:59 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 75
+2023-05-12 06:22:06 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 06:22:06 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 75
+2023-05-12 06:33:08 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 06:33:08 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 75
+2023-05-12 06:35:32 WARNING django.request Bad Request: /api/v1/student/change-profile/76/
+2023-05-12 06:35:32 WARNING django.server "PATCH /api/v1/student/change-profile/76/ HTTP/1.1" 400 87
+2023-05-12 06:44:26 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:44:26 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 06:44:41 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:44:41 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 06:44:48 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-12 06:44:48 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-12 06:45:05 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:45:05 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 06:45:12 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:45:12 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 06:45:14 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:45:14 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 06:45:23 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:45:23 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 06:45:30 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-12 06:45:30 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-12 06:46:06 WARNING django.request Forbidden: /api/v1/student/change-profile/26/
+2023-05-12 06:46:06 WARNING django.server "PATCH /api/v1/student/change-profile/26/ HTTP/1.1" 403 88
+2023-05-12 06:46:13 WARNING django.request Forbidden: /api/v1/student/change-profile/26/
+2023-05-12 06:46:13 WARNING django.server "PATCH /api/v1/student/change-profile/26/ HTTP/1.1" 403 88
+2023-05-12 06:46:15 WARNING django.request Forbidden: /api/v1/student/change-profile/26/
+2023-05-12 06:46:15 WARNING django.server "PATCH /api/v1/student/change-profile/26/ HTTP/1.1" 403 88
+2023-05-12 06:46:16 WARNING django.request Forbidden: /api/v1/student/change-profile/26/
+2023-05-12 06:46:16 WARNING django.server "PATCH /api/v1/student/change-profile/26/ HTTP/1.1" 403 88
+2023-05-12 06:46:16 WARNING django.request Forbidden: /api/v1/student/change-profile/26/
+2023-05-12 06:46:16 WARNING django.server "PATCH /api/v1/student/change-profile/26/ HTTP/1.1" 403 88
+2023-05-12 06:46:16 WARNING django.request Forbidden: /api/v1/student/change-profile/26/
+2023-05-12 06:46:16 WARNING django.server "PATCH /api/v1/student/change-profile/26/ HTTP/1.1" 403 88
+2023-05-12 06:47:05 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-12 06:47:05 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 82
+2023-05-12 06:47:11 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-12 06:47:11 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 82
+2023-05-12 06:47:44 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:47:44 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 76
+2023-05-12 06:48:16 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:48:16 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 06:49:48 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:49:48 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 06:49:50 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:49:50 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 06:50:01 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-12 06:50:01 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-12 06:50:14 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-12 06:50:14 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-12 06:50:18 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-12 06:50:18 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-12 06:50:22 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-12 06:50:22 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-12 06:50:23 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-12 06:50:23 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-12 06:51:41 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-12 06:51:41 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-12 06:51:46 WARNING django.request Bad Request: /api/v1/accounts/student-create/
+2023-05-12 06:51:46 WARNING django.server "POST /api/v1/accounts/student-create/ HTTP/1.1" 400 77
+2023-05-12 06:52:50 WARNING django.request Bad Request: /api/v1/student/change-profile/83/
+2023-05-12 06:52:50 WARNING django.server "PATCH /api/v1/student/change-profile/83/ HTTP/1.1" 400 92
+2023-05-12 06:52:52 WARNING django.request Bad Request: /api/v1/student/change-profile/83/
+2023-05-12 06:52:52 WARNING django.server "PATCH /api/v1/student/change-profile/83/ HTTP/1.1" 400 92
+2023-05-12 06:52:53 WARNING django.request Bad Request: /api/v1/student/change-profile/83/
+2023-05-12 06:52:53 WARNING django.server "PATCH /api/v1/student/change-profile/83/ HTTP/1.1" 400 92
+2023-05-12 06:52:53 WARNING django.request Bad Request: /api/v1/student/change-profile/83/
+2023-05-12 06:52:53 WARNING django.server "PATCH /api/v1/student/change-profile/83/ HTTP/1.1" 400 92
+2023-05-12 06:52:54 WARNING django.request Bad Request: /api/v1/student/change-profile/83/
+2023-05-12 06:52:54 WARNING django.server "PATCH /api/v1/student/change-profile/83/ HTTP/1.1" 400 92
+2023-05-12 06:52:54 WARNING django.request Bad Request: /api/v1/student/change-profile/83/
+2023-05-12 06:52:54 WARNING django.server "PATCH /api/v1/student/change-profile/83/ HTTP/1.1" 400 92
+2023-05-12 06:53:33 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 06:53:33 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-12 07:05:11 WARNING django.request Bad Request: /api/v1/student/change-profile/83/
+2023-05-12 07:05:11 WARNING django.server "PATCH /api/v1/student/change-profile/83/ HTTP/1.1" 400 75
+2023-05-12 07:05:25 WARNING django.request Bad Request: /api/v1/student/change-profile/83/
+2023-05-12 07:05:25 WARNING django.server "PATCH /api/v1/student/change-profile/83/ HTTP/1.1" 400 75
+2023-05-12 07:22:48 WARNING django.request Bad Request: /api/v1/student/change-profile/83/
+2023-05-12 07:22:48 WARNING django.server "PATCH /api/v1/student/change-profile/83/ HTTP/1.1" 400 75
+2023-05-12 07:35:48 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-12 07:35:48 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66

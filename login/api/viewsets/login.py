@@ -19,6 +19,7 @@ from login.api.serializers.login import (
     LoginSerializer,
     RecruiterLoginSerializer,
     AdminLogginSerializer,
+    UserSerializer,
 )
 
 from login.models import (
@@ -79,10 +80,11 @@ class StudentLoginView(generics.CreateAPIView):
                                     "slug": student.slug,
                                     "type": student.type,
                                     "is_blocked": student.is_blocked,
-                                    "Joined date": student.user.date_joined,
-                                    "is_active": student.user.is_active,
                                     "access": f"{access}",
                                     "refresh": f"{refresh}",
+                                    "own_id": student.id,
+                                    "image": student.image.url,
+                                    **UserSerializer(student.user).data,
                                 },
                             }
                         )
@@ -215,9 +217,11 @@ class RecruiterLoginView(generics.CreateAPIView):
                                         "joined date": joined_date.strftime(
                                             "%Y-%m-%d %H:%M:%S"
                                         ),
-                                        "is_active": recruiter.user.is_active,
+                                        "own_id": recruiter.id,
+                                        "image": recruiter.image.url,
                                         "access": f"{access}",
                                         "refresh": f"{refresh}",
+                                        **UserSerializer(recruiter.user).data,
                                     },
                                 }
                             )

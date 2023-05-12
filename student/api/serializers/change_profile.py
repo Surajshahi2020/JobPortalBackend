@@ -15,6 +15,21 @@ from django.db.models import Q
 
 
 class StudentProfileSerializer(serializers.ModelSerializer):
+    first_name = serializers.CharField(write_only=True)
+
+    last_name = serializers.CharField(write_only=True)
+
+    def to_representation(self, instance):
+        d = self.initial_data
+        user = self.context["request"].user
+        user.first_name = d.get("first_name", user.first_name)
+        user.last_name = d.get("last_name", user.last_name)
+        user.save()
+        response = super().to_representation(instance)
+        response["first_name"] = user.first_name
+        response["last_name"] = user.last_name
+        return response
+
     class Meta:
         model = StudentUser
         fields = [
@@ -22,25 +37,57 @@ class StudentProfileSerializer(serializers.ModelSerializer):
             "mobile",
             "gender",
             "type",
+            "first_name",
+            "last_name",
         ]
 
     def is_valid(self, *, raise_exception=False):
         data = self.initial_data
-        queryset = StudentUser.objects.exclude(id=self.instance.id)
-        mobile_user = queryset.filter(Q(mobile=data.get("mobile")))
-        if mobile_user.exists():
+        queryset = StudentUser.objects.exclude(id=self.instance.id).filter(
+            mobile=data.get("mobile")
+        )
+        if not "first_name" in data:
+            pass
+
+        if not "last_name" in data:
+            pass
+
+        if not "gender" in data:
+            pass
+        if not "type" in data:
+            pass
+
+        if queryset.exists():
             raise serializers.ValidationError(
-                "Mobile number already linked with another user!",
+                {
+                    "title": "Student Profile",
+                    "message": "Mobile number already linked with another user!",
+                }
             )
         if "mobile" in data and not validate_number(data.get("mobile")):
-            raise serializers.ValidationError("Please enter a valid mobile number!")
+            raise serializers.ValidationError(
+                {
+                    "title": "Student Profile",
+                    "message": "Please enter a valid mobile number!",
+                }
+            )
 
         if "image" in data and not validate_image(data.get("image")):
-            raise serializers.ValidationError("Please enter a valid url for image!")
+            raise serializers.ValidationError(
+                {
+                    "title": "Student Profile",
+                    "message": "Please enter a valid url for image!",
+                },
+            )
 
         return super().is_valid(raise_exception=raise_exception)
 
     def update(self, instance, validated_data):
+        user = instance.user
+        validated_data.pop("first_name", user.first_name)
+        validated_data.pop("last_name", user.last_name)
+        user.save()
+
         return super().update(instance, validated_data)
 
 

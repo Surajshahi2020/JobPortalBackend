@@ -1,0 +1,2 @@
+2023-05-10 12:35:04 WARNING django.request Not Found: /
+2023-05-10 12:35:04 WARNING django.server "GET / HTTP/1.1" 404 2425

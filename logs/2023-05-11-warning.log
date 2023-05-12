@@ -1,0 +1,1654 @@
+2023-05-11 03:18:26 WARNING django.request Not Found: /favicon.ico
+2023-05-11 03:18:26 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-11 03:22:40 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-11 03:22:40 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 80
+2023-05-11 03:47:48 WARNING django.request Not Found: /
+2023-05-11 03:47:48 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-11 03:48:13 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-11 03:48:13 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 80
+2023-05-11 03:52:26 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-11 03:52:26 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 80
+2023-05-11 03:54:03 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-11 03:54:03 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-11 06:53:34 WARNING django.request Not Found: /ao
+2023-05-11 06:53:34 WARNING django.server "GET /ao HTTP/1.1" 404 2449
+2023-05-11 06:53:34 WARNING django.request Not Found: /favicon.ico
+2023-05-11 06:53:34 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-11 06:56:44 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'first_name' was declared on serializer StudentProfileSerializer, but has not been included in the 'fields' option.
+2023-05-11 06:56:44 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 183067
+2023-05-11 06:56:44 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'first_name' was declared on serializer StudentProfileSerializer, but has not been included in the 'fields' option.
+2023-05-11 06:56:44 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 183067
+2023-05-11 06:57:18 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'first_name' was declared on serializer StudentProfileSerializer, but has not been included in the 'fields' option.
+2023-05-11 06:57:18 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 184198
+2023-05-11 06:57:18 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'first_name' was declared on serializer StudentProfileSerializer, but has not been included in the 'fields' option.
+2023-05-11 06:57:18 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 184198
+2023-05-11 07:00:28 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'first_name' was declared on serializer StudentProfileSerializer, but has not been included in the 'fields' option.
+2023-05-11 07:00:28 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 184058
+2023-05-11 07:00:28 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'first_name' was declared on serializer StudentProfileSerializer, but has not been included in the 'fields' option.
+2023-05-11 07:00:28 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 184058
+2023-05-11 07:00:49 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'first_name' was declared on serializer StudentProfileSerializer, but has not been included in the 'fields' option.
+2023-05-11 07:00:49 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 184082
+2023-05-11 07:00:49 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'first_name' was declared on serializer StudentProfileSerializer, but has not been included in the 'fields' option.
+2023-05-11 07:00:49 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 184082
+2023-05-11 07:04:08 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `first_name` is not valid for model `StudentUser`.
+2023-05-11 07:04:08 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 188123
+2023-05-11 07:04:08 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 83, in get_operation
+    request_body = self._get_request_body()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1277, in _get_request_body
+    schema, request_body_required = self._get_request_for_media_type(request_serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1308, in _get_request_for_media_type
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `first_name` is not valid for model `StudentUser`.
+2023-05-11 07:04:08 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 188123
+2023-05-11 07:17:36 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 07:17:36 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 39
+2023-05-11 07:18:09 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 59, in update
+    return super().update(instance, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 992, in update
+    raise_errors_on_nested_writes('update', self, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 844, in raise_errors_on_nested_writes
+    assert not any(
+AssertionError: The `.update()` method does not support writable dotted-source fields by default.
+Write an explicit `.update()` method for serializer `student.api.serializers.change_profile.StudentProfileSerializer`, or set `read_only=True` on dotted-source serializer fields.
+2023-05-11 07:18:09 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 147917
+2023-05-11 07:29:30 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: auth_user.first_name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 54, in update
+    user.save()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 990, in _save_table
+    updated = self._do_update(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1054, in _do_update
+    return filtered._update(values) > 0
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1231, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1982, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: auth_user.first_name
+2023-05-11 07:29:30 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 225400
+2023-05-11 08:18:34 WARNING django.request Not Found: /
+2023-05-11 08:18:34 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-11 08:18:34 WARNING django.request Not Found: /favicon.ico
+2023-05-11 08:18:34 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-11 08:18:55 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 08:18:55 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 39
+2023-05-11 08:21:02 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 57, in update
+    return super().update(instance, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 992, in update
+    raise_errors_on_nested_writes('update', self, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 844, in raise_errors_on_nested_writes
+    assert not any(
+AssertionError: The `.update()` method does not support writable dotted-source fields by default.
+Write an explicit `.update()` method for serializer `student.api.serializers.change_profile.StudentProfileSerializer`, or set `read_only=True` on dotted-source serializer fields.
+2023-05-11 08:21:02 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 148277
+2023-05-11 08:23:45 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-11 08:23:45 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 183
+2023-05-11 08:24:05 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-11 08:24:05 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-11 08:24:53 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 08:24:53 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 51
+2023-05-11 08:25:43 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 58, in update
+    return super().update(instance, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 992, in update
+    raise_errors_on_nested_writes('update', self, validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 844, in raise_errors_on_nested_writes
+    assert not any(
+AssertionError: The `.update()` method does not support writable dotted-source fields by default.
+Write an explicit `.update()` method for serializer `student.api.serializers.change_profile.StudentProfileSerializer`, or set `read_only=True` on dotted-source serializer fields.
+2023-05-11 08:25:43 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 148073
+2023-05-11 08:32:27 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'StudentUser' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 75, in update
+    return Response(serializer.data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `first_name` on serializer `StudentProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `StudentUser` instance.
+Original exception text was: 'StudentUser' object has no attribute 'first_name'.
+2023-05-11 08:32:27 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 148155
+2023-05-11 08:34:24 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'StudentUser' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 75, in update
+    return Response(serializer.data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 24, in to_representation
+    return super().to_representation(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `first_name` on serializer `StudentProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `StudentUser` instance.
+Original exception text was: 'StudentUser' object has no attribute 'first_name'.
+2023-05-11 08:34:24 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 152995
+2023-05-11 08:36:28 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 75, in update
+    return Response(serializer.data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 24, in to_representation
+    self.first_name.to_internal_value(user.first_name)
+AttributeError: 'StudentProfileSerializer' object has no attribute 'first_name'
+2023-05-11 08:36:28 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 132577
+2023-05-11 08:42:03 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 75, in update
+    return Response(serializer.data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 24, in to_representation
+    response = self.to_representation(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 24, in to_representation
+    response = self.to_representation(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 24, in to_representation
+    response = self.to_representation(instance)
+  [Previous line repeated 944 more times]
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 23, in to_representation
+    user = self.context["request"].user
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 627, in context
+    return getattr(self.root, '_context', {})
+RecursionError: maximum recursion depth exceeded
+2023-05-11 08:42:03 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 4746298
+2023-05-11 08:43:39 WARNING django.request Not Found: /api/v1/docal_update
+2023-05-11 08:43:39 WARNING django.server "GET /api/v1/docal_update HTTP/1.1" 404 3742
+2023-05-11 08:43:46 WARNING django.request Not Found: /api/v1/doc/_update
+2023-05-11 08:43:46 WARNING django.server "GET /api/v1/doc/_update HTTP/1.1" 404 3739
+2023-05-11 08:44:42 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 08:44:42 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 51
+2023-05-11 08:45:07 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 08:45:07 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 39
+2023-05-11 08:45:17 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'StudentUser' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 75, in update
+    return Response(serializer.data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 24, in to_representation
+    response = super().to_representation(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `first_name` on serializer `StudentProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `StudentUser` instance.
+Original exception text was: 'StudentUser' object has no attribute 'first_name'.
+2023-05-11 08:45:17 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 153282
+2023-05-11 08:45:26 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'StudentUser' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 75, in update
+    return Response(serializer.data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 24, in to_representation
+    response = super().to_representation(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `first_name` on serializer `StudentProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `StudentUser` instance.
+Original exception text was: 'StudentUser' object has no attribute 'first_name'.
+2023-05-11 08:45:26 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 153282
+2023-05-11 09:14:38 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:14:38 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 51
+2023-05-11 09:22:09 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 09:22:09 WARNING django.server "POST /api/v1/student/change-profile/35/ HTTP/1.1" 405 41
+2023-05-11 09:22:11 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 09:22:11 WARNING django.server "POST /api/v1/student/change-profile/35/ HTTP/1.1" 405 41
+2023-05-11 09:22:14 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 09:22:14 WARNING django.server "POST /api/v1/student/change-profile/35/ HTTP/1.1" 405 41
+2023-05-11 09:22:35 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:22:35 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 39
+2023-05-11 09:22:43 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:22:43 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 39
+2023-05-11 09:23:09 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:23:09 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 39
+2023-05-11 09:27:27 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 09:27:27 WARNING django.server "POST /api/v1/student/change-profile/35/ HTTP/1.1" 405 41
+2023-05-11 09:27:29 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 09:27:29 WARNING django.server "POST /api/v1/student/change-profile/35/ HTTP/1.1" 405 41
+2023-05-11 09:27:55 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 09:27:55 WARNING django.server "POST /api/v1/student/change-profile/35/ HTTP/1.1" 405 41
+2023-05-11 09:27:56 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 09:27:56 WARNING django.server "POST /api/v1/student/change-profile/35/ HTTP/1.1" 405 41
+2023-05-11 09:28:45 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:28:45 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 51
+2023-05-11 09:30:11 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 47, in is_valid
+    mobile_user = queryset.filter(mobile=queryset)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 337, in get_prep_lookup
+    raise ValueError(
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+2023-05-11 09:30:11 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 178675
+2023-05-11 09:30:45 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 47, in is_valid
+    mobile_user = queryset.filter(mobile=queryset)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 337, in get_prep_lookup
+    raise ValueError(
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+2023-05-11 09:30:45 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 179302
+2023-05-11 09:31:07 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    return super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 47, in is_valid
+    mobile_user = queryset.get(mobile=queryset)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 337, in get_prep_lookup
+    raise ValueError(
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+2023-05-11 09:31:07 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 185329
+2023-05-11 09:31:32 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:31:32 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 51
+2023-05-11 09:36:07 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:36:07 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:36:21 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:36:21 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 09:38:06 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 09:38:06 WARNING django.server "POST /api/v1/student/change-profile/35/ HTTP/1.1" 405 41
+2023-05-11 09:38:36 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:38:36 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:38:52 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:38:52 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:39:04 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:39:04 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:39:10 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:39:10 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:39:23 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:39:23 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:40:04 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:40:04 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:40:10 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:40:10 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:40:20 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:40:20 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:40:40 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:40:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:08 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:08 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:14 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:14 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:38 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:38 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:40 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:40 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:41 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:41 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:41 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:41 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:41 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:41 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:41 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:41 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:48:52 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:48:52 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:49:03 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:49:03 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:49:23 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:49:23 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:51:19 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:51:19 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 09:51:27 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:51:27 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:51:37 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:51:37 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 09:51:55 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:51:55 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:51:56 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:51:56 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:52:04 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:52:04 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 09:54:14 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:54:14 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 09:54:52 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:54:52 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 09:55:03 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:55:03 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 09:55:28 ERROR django.request Internal Server Error: /api/v1/student/change-profile/35/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'StudentUser'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 229, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 56, in update
+    response = super().update(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/serializers/change_profile.py", line 55, in is_valid
+    queryset = StudentUser.objects.exclude(id=self.instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1444, in exclude
+    return self._filter_or_exclude(True, args, kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1459, in _filter_or_exclude_inplace
+    self._query.add_q(~Q(*args, **kwargs))
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2057, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <StudentUser: student@example.com>.
+2023-05-11 09:55:28 ERROR django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 500 189370
+2023-05-11 09:57:42 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:57:42 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 78
+2023-05-11 09:57:42 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:57:42 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 78
+2023-05-11 09:57:56 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:57:56 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 09:58:43 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:58:43 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 09:58:57 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 09:58:57 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 10:00:52 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:00:52 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 10:01:17 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:01:17 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:01:54 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:01:54 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:03:25 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:03:25 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:04:01 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:04:01 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:04:15 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:04:15 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:04:51 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:04:51 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:04:59 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:04:59 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:05:01 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:05:01 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:05:01 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:05:01 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:05:01 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:05:01 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:05:01 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:05:01 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:05:02 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:05:02 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:05:02 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:05:02 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:05:02 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:05:02 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:06:26 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:06:26 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 10:06:43 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:06:43 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 92
+2023-05-11 10:07:19 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:07:19 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 10:07:29 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:07:29 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:07:35 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:07:35 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 10:07:43 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:07:43 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 125
+2023-05-11 10:12:15 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:12:15 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 10:14:21 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 10:14:21 WARNING django.server "GET /api/v1/student/change-profile/35/ HTTP/1.1" 405 40
+2023-05-11 10:14:37 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 10:14:37 WARNING django.server "GET /api/v1/student/change-profile/35/ HTTP/1.1" 405 40
+2023-05-11 10:14:57 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:14:57 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 10:39:33 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 10:39:33 WARNING django.server "PUT /api/v1/student/change-profile/35/ HTTP/1.1" 405 40
+2023-05-11 10:49:34 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:49:34 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 10:49:37 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:49:37 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 10:50:29 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:50:29 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 10:51:21 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:51:21 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 10:51:57 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:51:57 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 10:51:59 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:51:59 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 10:52:41 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:52:41 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 10:52:58 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 10:52:58 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:13:12 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:13:12 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:13:13 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:13:13 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:29:52 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:29:52 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:29:53 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:29:53 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:29:53 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:29:53 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:38:40 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:38:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:53:07 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:53:07 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:53:39 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:53:39 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:53:45 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:53:45 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:54:32 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:54:32 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:55:58 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:55:58 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:58:20 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:58:20 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 11:59:41 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:59:41 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 11:59:43 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:59:43 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 11:59:43 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:59:43 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 11:59:54 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 11:59:54 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 12:00:22 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:00:22 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 12:00:54 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:00:54 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:01:39 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-11 12:01:39 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-11 12:01:40 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-11 12:01:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-11 12:01:40 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-11 12:01:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-11 12:01:40 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-11 12:01:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-11 12:01:40 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-11 12:01:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-11 12:06:16 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:06:16 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:06:33 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:06:33 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 12:06:35 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:06:35 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 12:06:59 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:06:59 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 12:08:42 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:08:42 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:08:44 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:08:44 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:12:03 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:03 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 12:12:03 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:03 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 12:12:05 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:05 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 12:12:20 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:20 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:12:21 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:21 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:12:22 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:22 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:12:22 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:22 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:12:22 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:22 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:12:22 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:22 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:12:35 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:35 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:12:47 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:12:47 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:06 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:06 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:07 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:07 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:07 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:07 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:15 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:15 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:16 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:16 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:16 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:16 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:17 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:17 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:17 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:17 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:17 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:17 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:17 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:17 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:28 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:13:28 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:13:38 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 12:13:38 WARNING django.server "GET /api/v1/student/change-profile/35/ HTTP/1.1" 405 5823
+2023-05-11 12:15:42 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:15:42 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:16:48 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:16:48 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 12:17:22 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:17:22 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:17:47 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:17:47 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 12:18:45 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:18:45 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:19:49 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:19:49 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:20:23 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:20:23 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:20:58 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:20:58 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:21:05 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:21:05 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:24:18 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:24:18 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:24:20 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:24:20 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:24:26 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:24:26 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:25:01 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:25:01 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:29:46 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:29:46 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 12:53:22 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:53:22 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 12:54:06 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 12:54:06 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 13:03:38 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 13:03:38 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 13:08:32 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 13:08:32 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 13:11:18 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 13:11:18 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 87
+2023-05-11 13:11:23 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 13:11:23 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 14:22:26 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:22:26 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 14:25:07 WARNING django.request Method Not Allowed: /api/v1/student/change-profile/35/
+2023-05-11 14:25:07 WARNING django.server "POST /api/v1/student/change-profile/35/ HTTP/1.1" 405 41
+2023-05-11 14:25:24 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:25:24 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 14:25:34 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:25:34 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 14:25:53 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:25:53 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 14:26:02 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:26:02 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 14:26:03 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:26:03 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 14:30:14 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:30:14 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 14:30:33 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:30:33 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 14:44:40 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:44:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 14:48:01 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:48:01 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 14:48:09 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:48:09 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 14:48:19 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 14:48:19 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 17:41:27 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-11 17:41:27 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-11 17:41:32 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-11 17:41:32 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-11 17:41:39 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-11 17:41:39 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-11 17:41:40 WARNING django.request Unauthorized: /api/v1/student/change-profile/35/
+2023-05-11 17:41:40 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 401 57
+2023-05-11 17:41:42 WARNING django.request Unauthorized: /api/v1/cadmin/student-list/
+2023-05-11 17:41:42 WARNING django.server "GET /api/v1/cadmin/student-list/ HTTP/1.1" 401 57
+2023-05-11 17:43:51 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 17:43:51 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 17:52:41 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 17:52:41 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 17:53:32 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 17:53:32 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 17:53:36 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 17:53:36 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 17:53:37 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 17:53:37 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 17:57:49 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 17:57:49 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 17:59:37 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 17:59:37 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:01:39 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:01:39 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:02:29 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:02:29 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:03:42 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:03:42 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:03:47 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:03:47 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:03:52 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:03:52 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:04:11 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:04:11 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:05:36 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:05:36 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:05:37 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:05:37 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:05:39 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:05:39 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:05:44 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:05:44 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:07:58 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:07:58 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:07:59 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:07:59 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:08:00 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:08:00 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:08:00 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:08:00 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:08:07 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:08:07 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:10:15 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:10:15 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:12:21 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:12:21 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:12:22 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:12:22 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:12:22 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:12:22 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:12:23 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:12:23 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 85
+2023-05-11 18:17:34 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:17:34 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:18:26 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:18:26 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:20:57 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:20:57 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:21:17 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:21:17 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:21:24 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:21:24 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75
+2023-05-11 18:21:25 WARNING django.request Bad Request: /api/v1/student/change-profile/35/
+2023-05-11 18:21:25 WARNING django.server "PATCH /api/v1/student/change-profile/35/ HTTP/1.1" 400 75

@@ -4,6 +4,14 @@ from login.models import StudentUser, Recruiter
 from django.contrib.auth.models import User
 
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        exclude = [
+            "password",
+        ]
+
+
 class LoginSerializer(BaseUserCreateSerializer):
     class Meta:
         model = StudentUser

@@ -49,11 +49,18 @@ class ChangeProfileView(generics.UpdateAPIView):
         if not StudentUser.objects.filter(id=kwargs.get("pk")).exists():
             return Response(
                 {
-                    "title": "Profile update",
+                    "title": "Student Profile",
                     "messaage": "StudentUser doesnot exist!",
                 }
             )
-        return super().update(request, *args, **kwargs)
+        response = super().update(request, *args, **kwargs)
+        return Response(
+            {
+                "title": "Student Profile",
+                "message": "Student profile updated successfully",
+                "data": response.data,
+            }
+        )
 
 
 @extend_schema_view(
