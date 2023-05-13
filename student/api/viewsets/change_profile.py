@@ -13,13 +13,19 @@ from student.api.serializers.change_profile import (
     StudentProfileSerializer,
     StudentPasswordSerializer,
     JobApplySerializer,
+    StudentJobAppySerializer,
 )
 
 from common.permissions import (
     IsStudent,
 )
 
-from login.models import StudentUser
+from common.pagination import CustomPagination
+
+
+from login.models import StudentUser, Apply
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter, OrderingFilter
 
 
 @extend_schema_view(
@@ -83,18 +89,20 @@ class StudentPasswordView(generics.CreateAPIView):
     permission_classes = [IsStudent]
 
     def create(self, request, *args, **kwargs):
+        data = request.data
         response = super().create(request, *args, **kwargs)
         return Response(
             {
                 "title": "Student change-password",
                 "message": "Student password changed successfully!",
+                "data": response.data,
             }
         )
 
 
 @extend_schema_view(
     post=extend_schema(
-        description="Job Apply Api",
+        description="Job Apply Post Api",
         summary="Refer to Schemas At Bottom",
         request=JobApplySerializer,
         responses={
@@ -120,4 +128,50 @@ class JobApplyView(generics.CreateAPIView):
                 "message": "Job Applied Successfully!",
                 "data": response.data,
             }
+        )
+
+
+@extend_schema_view(
+    get=extend_schema(
+        description="Job Apply List Api",
+        summary="Refer to Schemas At Bottom",
+        request=JobApplySerializer,
+        responses={
+            200: OpenApiResponse(
+                description="Success Response when job applied list is listed successfully!",
+            ),
+            401: OpenApiResponse(
+                description="Authentication error!",
+            ),
+        },
+        tags=["Student Apis"],
+    ),
+)
+class JobApplyListView(generics.ListAPIView):
+    queryset = Apply.objects.all()
+    serializer_class = StudentJobAppySerializer
+    permission_classes = [IsStudent]
+    pagination_class = CustomPagination
+
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_fields = ["apply_date"]
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset()).filter(
+            student__user=request.user
+        )
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            serializer = self.get_paginated_response(serializer.data)
+        else:
+            serializer = self.get_serializer(queryset, many=True)
+
+        return Response(
+            {
+                "title": "Candidates List",
+                "message": "Candidates listed successfully",
+                "data": serializer.data,
+            },
+            200,
         )

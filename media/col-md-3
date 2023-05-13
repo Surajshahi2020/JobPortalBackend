@@ -1,0 +1,59 @@
+{ <div className="col-md-3">
+            <div className="job-list">
+              {localStorage.getItem("accessToken") && (<>
+                <h2>Lastest Jobs</h2>
+              </>)}
+              {jobList.map((job) => (
+                <div className="job" key={job.id}>
+                  <div className="job-list-content">
+                    <div className="job-list-content-detail">
+                      <div className="job-list-content-img">
+                        <img src={image} alt="" />
+                      </div>
+                      <div className="job-list-content-list">
+                        <h3>{job.title}</h3>
+                        <div className="job-list-content-list-descrip">
+                          <i className="fa fa-check "></i>
+                          <p>{job.description}</p>
+                        </div>
+                        <div className="job-list-content-list-descrip">
+                          <i className="fa fa-check "></i>
+                          <p>{job.experience}</p>
+                        </div>
+                        <div className="job-list-content-list-descrip">
+                          <i className="fa fa-check "></i>
+                          <p>Rs.{job.salary}</p>
+                        </div>
+                        <div className="job-list-content-list-descrip">
+                          <i className="fa fa-check "></i>
+                          <p>{job.creationdate}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="date-apply-now">
+                      <div className="date now">
+                        <div className="date-start-end">
+                          <i className="fa fa-calendar-plus-o"></i>{" "}
+                          <p className="date">
+                            <span>Start: </span>
+                            {job.start_date}
+                          </p>
+                        </div>
+                        <div className="date-start-end">
+                          <i className="fa fa-calendar-plus-o"></i>{" "}
+                          <p className="date">
+                            <span>End: </span>
+                            {job.end_date}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="date-link">
+                        <a href="https://example.com">Apply Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div> }
+s

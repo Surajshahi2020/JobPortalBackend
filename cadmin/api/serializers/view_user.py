@@ -35,27 +35,33 @@ class BaseChangePasswordSerializer(serializers.ModelSerializer):
         confirm_password = attrs.get("confirm_password")
         if not user.is_authenticated:
             raise serializers.ValidationError(
-                "Authentication credentials were not provided."
+                {
+                    "title": "Student change-password",
+                    "message": "Authentication credentials were not provided.",
+                }
             )
 
         if not user.check_password(old_password):
             raise serializers.ValidationError(
                 {
-                    "old_password": "Wrong password.",
+                    "title": "Student change-password",
+                    "message": "Old password is Wrong password.",
                 },
             )
 
         if new_password != confirm_password:
             raise serializers.ValidationError(
                 {
-                    "confirm_password": "Passwords do not match.",
+                    "title": "Student change-password",
+                    "message": "Confirm Passwords do not match.",
                 },
             )
 
         if old_password == new_password:
             raise serializers.ValidationError(
                 {
-                    "new_password": "New password cannot be the same as old password.",
+                    "title": "Student change-password",
+                    "message": "New password cannot be the same as old password.",
                 },
             )
 

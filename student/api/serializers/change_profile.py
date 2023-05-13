@@ -104,12 +104,18 @@ class StudentPasswordSerializer(BaseChangePasswordSerializer):
         user = self.context["request"].user
         if not isinstance(user, User):
             raise serializers.ValidationError(
-                "User is not a valid instance of User model!"
+                {
+                    "title": "Student change-password",
+                    "message": "User is not a valid instance of User model!",
+                }
             )
         studentuser = StudentUser.objects.filter(user=user).first()
         if not studentuser:
             raise serializers.ValidationError(
-                "This User does not exist in Student model!"
+                {
+                    "title": "Student change-password",
+                    "message": "This User does not exist in Student model!",
+                }
             )
         return super().is_valid(raise_exception=raise_exception)
 
@@ -160,3 +166,9 @@ class JobApplySerializer(serializers.ModelSerializer):
         return Apply.objects.create(
             **validated_data, student=student, apply_date=date.today()
         )
+
+
+class StudentJobAppySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Apply
+        fields = "__all__"
