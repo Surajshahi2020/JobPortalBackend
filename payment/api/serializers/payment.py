@@ -64,6 +64,23 @@ class KhaltiPaymentVerifySerializer(serializers.ModelSerializer):
         data = {
             "pidx": pidx,
         }
-        response = req.post(url, headers=headers, json=data).json()
-        print(22222222222222222222222, response)
-        return super().create(validated_data)
+        response = req.post(url, headers=headers, json=data)
+        if response.status_code == 200:
+            response_data = response.json()
+            if response_data.get("status") == "completed":
+                return super().create(validated_data)
+            else:
+                raise serializers.ValidationError(
+                    {
+                        "title": "Pidx validation",
+                        "message": "Response status is not completed",
+                    }
+                )
+        else:
+            raise serializers.ValidationError(
+                {
+                    "title": "Pidx validation",
+                    "message": "Unexpected response status: "
+                    + str(response.status_code),
+                }
+            )

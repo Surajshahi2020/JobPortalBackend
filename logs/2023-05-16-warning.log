@@ -3061,3 +3061,47 @@ requests.exceptions.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 2023-05-16 12:01:24 WARNING django.server "POST /api/v1/payment/verify-payment/ HTTP/1.1" 400 56
 2023-05-16 12:03:53 WARNING django.request Method Not Allowed: /api/v1/payment/make-payment/
 2023-05-16 12:03:53 WARNING django.server "GET /api/v1/payment/make-payment/?pidx=jrFeRA9K8KQhvdAee7aJYF&txnId=6L38gRQpm29Exk9SLqESD9&amount=10000&mobile=98XXXXX002&purchase_order_id=26&purchase_order_name=My-Django%20Developer&transaction_id=6L38gRQpm29Exk9SLqESD9 HTTP/1.1" 405 14029
+2023-05-16 13:19:20 WARNING django.request Method Not Allowed: /api/v1/payment/make-payment/
+2023-05-16 13:19:20 WARNING django.server "GET /api/v1/payment/make-payment/?pidx=sDxM2HuMq7g6Z6mw4pEcGT&txnId=eTVJe29Si9577ZDBB9BJg8&amount=74500&mobile=98XXXXX002&purchase_order_id=25&purchase_order_name=My-Python%20Developer&transaction_id=eTVJe29Si9577ZDBB9BJg8 HTTP/1.1" 405 14029
+2023-05-16 13:19:20 WARNING django.request Not Found: /favicon.ico
+2023-05-16 13:19:20 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-16 13:40:49 ERROR django.request Internal Server Error: /api/v1/payment/verify-payment/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/payment/api/viewsets/payment.py", line 68, in create
+    response = super().create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/payment/api/serializers/payment.py", line 68, in create
+    print(22222222222222222222222, response.status)
+AttributeError: 'dict' object has no attribute 'status'
+2023-05-16 13:40:49 ERROR django.server "POST /api/v1/payment/verify-payment/ HTTP/1.1" 500 126113
+2023-05-16 13:50:54 WARNING django.request Bad Request: /api/v1/payment/verify-payment/
+2023-05-16 13:50:54 WARNING django.server "POST /api/v1/payment/verify-payment/ HTTP/1.1" 400 90
+2023-05-16 13:51:16 WARNING django.request Bad Request: /api/v1/payment/verify-payment/
+2023-05-16 13:51:16 WARNING django.server "POST /api/v1/payment/verify-payment/ HTTP/1.1" 400 89
+2023-05-16 13:51:37 WARNING django.request Bad Request: /api/v1/payment/verify-payment/
+2023-05-16 13:51:37 WARNING django.server "POST /api/v1/payment/verify-payment/ HTTP/1.1" 400 71
