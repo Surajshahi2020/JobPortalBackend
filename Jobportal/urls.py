@@ -31,6 +31,7 @@ urlpatterns = [
                 path("student/", include("student.urls")),
                 path("recruiter/", include("recruiter.urls")),
                 path("miscellaneous/", include("miscellaneous.urls")),
+                path("payment/", include("payment.urls")),
             ],
         ),
     ),

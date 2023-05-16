@@ -1,0 +1,272 @@
+2023-05-15 03:13:59 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:13:59 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:13:59 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:13:59 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:07 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:07 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:07 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:07 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:33 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:33 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:33 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:33 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:52 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:52 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:52 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:52 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:53 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:53 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:53 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:53 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:55 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:55 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:55 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:55 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:56 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:56 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:56 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:56 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:58 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:58 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:14:58 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:14:58 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:12 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:12 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:13 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:13 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:16 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:16 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:17 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:17 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:18 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:18 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:21 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:21 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:21 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:21 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:28 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:28 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:29 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:29 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:29 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:29 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:29 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:29 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:29 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:29 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:30 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:30 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:31 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:31 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:31 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:31 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:31 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:31 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:31 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:31 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:31 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:15:31 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:15:34 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:34 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:34 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:34 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:35 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:35 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:35 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:35 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:54 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:54 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:54 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:54 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:55 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:55 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:15:55 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-05-15 03:15:55 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-05-15 03:16:07 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:16:07 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:08 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:16:08 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:08 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:16:08 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:08 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:16:08 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:08 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:16:08 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:09 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:16:09 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:09 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:16:09 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:09 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-05-15 03:16:09 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:13 WARNING django.request Unauthorized: /api/v1/accounts/recruiter-login/
+2023-05-15 03:16:13 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:13 WARNING django.request Unauthorized: /api/v1/accounts/recruiter-login/
+2023-05-15 03:16:13 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:13 WARNING django.request Unauthorized: /api/v1/accounts/recruiter-login/
+2023-05-15 03:16:13 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:14 WARNING django.request Unauthorized: /api/v1/accounts/recruiter-login/
+2023-05-15 03:16:14 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 401 183
+2023-05-15 03:16:30 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-15 03:16:30 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-15 03:16:44 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-15 03:16:44 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-15 03:16:49 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-15 03:16:49 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 83
+2023-05-15 03:17:13 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:17:13 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:17:17 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:17:17 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:17:19 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:17:19 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:17:31 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:17:31 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:17:37 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:17:37 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:17:37 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:17:37 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:17:40 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:17:40 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:17:42 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:17:42 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:18:16 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:18:16 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:18:52 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:18:52 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:18:55 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:18:55 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:18:56 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:18:56 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:18:58 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:18:58 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:19:00 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:19:00 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:19:08 WARNING django.request Not Found: /favicon.ico
+2023-05-15 03:19:08 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-15 03:19:57 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:19:57 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:20:07 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:20:07 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:20:09 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:20:09 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:20:26 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:20:26 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 5233
+2023-05-15 03:20:28 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:20:28 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 5233
+2023-05-15 03:20:34 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:20:34 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 5500
+2023-05-15 03:20:36 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:20:36 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 5500
+2023-05-15 03:20:36 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:20:36 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 5500
+2023-05-15 03:20:37 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:20:37 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 5500
+2023-05-15 03:21:03 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:21:03 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 03:21:03 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:21:03 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 03:21:06 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:21:06 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 03:21:08 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:21:08 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 03:21:12 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:21:12 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 03:22:25 WARNING django.request Unauthorized: /api/v1/doc/
+2023-05-15 03:22:25 WARNING django.server "GET /api/v1/doc/ HTTP/1.1" 401 16
+2023-05-15 03:22:32 WARNING django.request Unauthorized: /api/v1/doc/
+2023-05-15 03:22:32 WARNING django.server "GET /api/v1/doc/ HTTP/1.1" 401 16
+2023-05-15 03:22:58 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:22:58 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:27:27 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:27:27 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:34:06 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:34:06 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:34:08 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:34:08 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:34:21 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:34:21 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:34:51 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:34:51 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:34:57 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:34:57 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:34:58 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:34:58 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:35:06 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:35:06 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:35:12 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:35:12 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:35:33 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:35:33 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:35:35 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:35:35 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:35:38 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:35:38 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:35:50 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:35:50 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:35:54 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:35:54 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:35:57 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:35:57 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:36:01 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:36:01 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:36:03 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:36:03 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:36:07 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:36:07 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 57
+2023-05-15 03:36:49 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:36:49 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 03:36:53 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:36:53 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 03:37:04 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:37:04 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 03:37:27 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 03:37:27 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 04:01:41 WARNING django.request Unauthorized: /api/v1/student/job-apply-list/
+2023-05-15 04:01:41 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 401 183
+2023-05-15 16:38:06 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-15 16:38:06 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-15 16:42:20 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-15 16:42:20 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 80
+2023-05-15 16:42:40 WARNING django.request Forbidden: /api/v1/student/job-apply-list/
+2023-05-15 16:42:40 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 403 88
+2023-05-15 16:56:34 WARNING django.request Not Found: /job_post
+2023-05-15 16:56:34 WARNING django.server "GET /job_post HTTP/1.1" 404 2467
+2023-05-15 16:56:48 WARNING django.request Not Found: /job_post
+2023-05-15 16:56:48 WARNING django.server "GET /job_post HTTP/1.1" 404 2467
+2023-05-15 16:56:49 WARNING django.request Not Found: /job_post
+2023-05-15 16:56:49 WARNING django.server "GET /job_post HTTP/1.1" 404 2467
+2023-05-15 17:02:45 WARNING django.request Forbidden: /api/v1/student/job-apply-list/
+2023-05-15 17:02:45 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 403 88
+2023-05-15 17:18:17 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-15 17:18:17 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 80
+2023-05-15 17:23:06 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-15 17:23:06 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-15 17:24:10 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-15 17:24:10 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-15 17:36:21 WARNING django.request Not Found: /api/v1/doc77
+2023-05-15 17:36:21 WARNING django.server "GET /api/v1/doc77 HTTP/1.1" 404 3721
+2023-05-15 17:36:25 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:36:25 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:36:28 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:36:28 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:36:45 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:36:45 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:36:46 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:36:46 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:37:49 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:37:49 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:37:51 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:37:51 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:37:51 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:37:51 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:37:52 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:37:52 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:37:53 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:37:53 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:37:55 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:37:55 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:37:56 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:37:56 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:37:57 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:37:57 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718
+2023-05-15 17:37:58 WARNING django.request Not Found: /api/v1/docs
+2023-05-15 17:37:58 WARNING django.server "GET /api/v1/docs HTTP/1.1" 404 3718

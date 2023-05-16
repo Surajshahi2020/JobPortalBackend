@@ -169,8 +169,8 @@ class JobApplyListView(generics.ListAPIView):
 
         return Response(
             {
-                "title": "Candidates List",
-                "message": "Candidates listed successfully",
+                "title": "Student Applied Job",
+                "message": "Applied Job listed successfully",
                 "data": serializer.data,
             },
             200,

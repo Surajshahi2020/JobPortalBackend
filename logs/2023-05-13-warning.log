@@ -222,3 +222,55 @@ Traceback (most recent call last):
     raise ValueError(
 ValueError: Cannot query "student163@gmail.com": Must be "Job" instance.
 2023-05-13 06:18:40 ERROR django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 500 148038
+2023-05-13 07:44:41 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-13 07:44:41 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 52
+2023-05-13 10:47:55 WARNING django.request Not Found: /
+2023-05-13 10:47:55 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-13 11:05:28 ERROR django.request Internal Server Error: /api/v1/student/job-apply-list/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/student/api/viewsets/change_profile.py", line 166, in list
+    serializer = self.get_paginated_response(serializer.data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'title' was declared on serializer StudentJobAppySerializer, but has not been included in the 'fields' option.
+2023-05-13 11:05:28 ERROR django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 500 155335
+2023-05-13 11:25:01 WARNING django.request Not Found: /favicon.ico
+2023-05-13 11:25:01 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476

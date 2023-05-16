@@ -169,6 +169,20 @@ class JobApplySerializer(serializers.ModelSerializer):
 
 
 class StudentJobAppySerializer(serializers.ModelSerializer):
+    title = serializers.ReadOnlyField(source="job.title")
+    salary = serializers.ReadOnlyField(source="job.salary")
+    experience = serializers.ReadOnlyField(source="job.experience")
+    start_date = serializers.ReadOnlyField(source="job.start_date")
+    end_date = serializers.ReadOnlyField(source="job.end_date")
+
     class Meta:
         model = Apply
-        fields = "__all__"
+        fields = [
+            "resume",
+            "apply_date",
+            "title",
+            "salary",
+            "experience",
+            "start_date",
+            "end_date",
+        ]

@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "recruiter",
     "miscellaneous",
     "corsheaders",
+    "payment",
 ]
 
 MIDDLEWARE = [
@@ -214,3 +215,7 @@ LOGGING = {
 
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+KHALTI_PUBLIC_KEY = "test_public_key_f1a52ad091794dd58551b9ccdb0f2a18"
+KHALTI_SECRET_KEY = "test_secret_key_dc492949e65d486ab8b869e91cfd13ba"
