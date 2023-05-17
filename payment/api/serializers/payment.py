@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from login.models import Payment, Job, VerifyPayment
+from login.models import Payment, Job
 import requests as req
 from datetime import datetime
 
@@ -48,13 +48,15 @@ class KhaltiPaymentSerializer(serializers.ModelSerializer):
 
 class KhaltiPaymentVerifySerializer(serializers.ModelSerializer):
     class Meta:
-        model = VerifyPayment
+        model = Payment
         fields = [
-            "reference_code",
+            "pidx",
+            "job",
         ]
 
     def create(self, validated_data):
-        pidx = validated_data.get("reference_code")
+        pidx = validated_data.get("pidx")
+        job = validated_data.get("job")
         url = "https://a.khalti.com/api/v2/epayment/lookup/"
         headers = {
             "Authorization": "Key dcbee64c6f8a47ffa81d7f643d583204",
@@ -67,8 +69,21 @@ class KhaltiPaymentVerifySerializer(serializers.ModelSerializer):
         response = req.post(url, headers=headers, json=data)
         if response.status_code == 200:
             response_data = response.json()
-            if response_data.get("status") == "completed":
-                return super().create(validated_data)
+            if response_data.get("status") == "Completed":
+                pay = Payment.objects.filter(
+                    student__user=self.context["request"].user, job=job
+                )
+                if pay.exists():
+                    pay = pay.first()
+                    pay.pidx = pidx
+                    pay.save()
+                    return pay
+                return serializers.ValidationError(
+                    {
+                        "title": "Amount Verification",
+                        "message": "Payment Reference not found",
+                    }
+                )
             else:
                 raise serializers.ValidationError(
                     {

@@ -6,11 +6,12 @@ from drf_spectacular.utils import (
     extend_schema_view,
     OpenApiResponse,
 )
-from login.models import Payment, VerifyPayment
+from login.models import Payment
 from payment.api.serializers.payment import (
     KhaltiPaymentSerializer,
     KhaltiPaymentVerifySerializer,
 )
+from common.permissions import IsStudent
 
 
 @extend_schema_view(
@@ -61,8 +62,9 @@ class KhaltiPaymentCreateView(generics.CreateAPIView):
     ),
 )
 class KhaltiPaymentVerifyCreateView(generics.CreateAPIView):
-    queryset = VerifyPayment.objects.all()
+    queryset = Payment.objects.all()
     serializer_class = KhaltiPaymentVerifySerializer
+    permission_classes = [IsStudent]
 
     def create(self, request, *args, **kwargs):
         response = super().create(request, *args, **kwargs)

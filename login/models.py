@@ -64,11 +64,7 @@ class Payment(models.Model):
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
     apply_date = models.DateField()
     amount = models.DecimalField(decimal_places=2, max_digits=5)
-    reference_code = models.CharField(max_length=255)
+    pidx = models.CharField(max_length=255)
 
     def __str__(self) -> str:
         return f"{self.id}--{self.reference_code}"
-
-
-class VerifyPayment(models.Model):
-    reference_code = models.CharField(max_length=255)
