@@ -53,7 +53,7 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 class JobPostCreateView(generics.CreateAPIView):
     queryset = Job.objects.all()
     serializer_class = JobPostSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsRecruiter]
 
     def create(self, request, *args, **kwargs):
         response = super().create(request, *args, **kwargs)

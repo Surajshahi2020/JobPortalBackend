@@ -1,0 +1,203 @@
+2023-05-20 03:50:47 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 03:50:47 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 03:50:54 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 03:50:54 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 03:51:07 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 03:51:07 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 03:51:08 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 03:51:08 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 04:51:02 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 04:51:02 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 04:57:58 WARNING django.request Forbidden: /api/v1/recruiter/change-profile/83/
+2023-05-20 04:57:58 WARNING django.server "PATCH /api/v1/recruiter/change-profile/83/ HTTP/1.1" 403 91
+2023-05-20 04:59:01 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 04:59:01 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 05:00:52 WARNING django.request Unauthorized: /api/v1/recruiter/candidate-applied/
+2023-05-20 05:00:52 WARNING django.server "GET /api/v1/recruiter/candidate-applied/ HTTP/1.1" 401 57
+2023-05-20 05:10:39 WARNING django.request Forbidden: /api/v1/student/job-apply-list/
+2023-05-20 05:10:39 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 403 88
+2023-05-20 05:12:51 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:12:51 WARNING django.request Not Found: /favicon.ico
+2023-05-20 05:12:51 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-05-20 05:12:54 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:12:57 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:14:39 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:14:44 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:14:53 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:14:59 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:15:05 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:15:11 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:15:38 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 05:16:04 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 05:16:04 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 80
+2023-05-20 05:16:13 WARNING django.request Forbidden: /api/v1/student/job-apply-list/
+2023-05-20 05:16:13 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 403 88
+2023-05-20 05:16:15 WARNING django.request Forbidden: /api/v1/student/job-apply-list/
+2023-05-20 05:16:15 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 403 88
+2023-05-20 05:16:57 WARNING django.request Not Found: /api/v1/recruiter/candidate-applied//
+2023-05-20 05:16:57 WARNING django.server "GET /api/v1/recruiter/candidate-applied// HTTP/1.1" 404 6591
+2023-05-20 05:18:31 WARNING django.request Unauthorized: /api/v1/recruiter/candidate-applied/
+2023-05-20 05:18:31 WARNING django.server "GET /api/v1/recruiter/candidate-applied/ HTTP/1.1" 401 57
+2023-05-20 05:28:07 ERROR django.request Internal Server Error: /api/v1/recruiter/candidate-applied/
+Traceback (most recent call last):
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/common/permissions.py", line 72, in decorated_func
+    return func(self, *args, **kwargs)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/recruiter/api/viewsets/add_job.py", line 239, in list
+    serializer = self.get_paginated_response(serializer.data)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/Desktop/JobBackend/JobPortalBackend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'name' was declared on serializer CandidateListSerializer, but has not been included in the 'fields' option.
+2023-05-20 05:28:07 ERROR django.server "GET /api/v1/recruiter/candidate-applied/ HTTP/1.1" 500 159926
+2023-05-20 05:35:35 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 05:35:35 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 05:37:54 WARNING django.request Unauthorized: /api/v1/recruiter/candidate-applied/
+2023-05-20 05:37:54 WARNING django.server "GET /api/v1/recruiter/candidate-applied/ HTTP/1.1" 401 57
+2023-05-20 06:09:27 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 06:10:09 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 06:10:13 WARNING django.server "GET /static/admin/css/fonts.css HTTP/1.1" 404 1930
+2023-05-20 06:42:04 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 06:42:04 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 06:43:15 WARNING django.request Forbidden: /api/v1/student/job-apply-list/
+2023-05-20 06:43:15 WARNING django.server "GET /api/v1/student/job-apply-list/ HTTP/1.1" 403 88
+2023-05-20 06:46:19 WARNING django.request Forbidden: /api/v1/student/job-apply/
+2023-05-20 06:46:19 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 403 88
+2023-05-20 07:09:47 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 07:09:47 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 07:36:28 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:36:28 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 401 57
+2023-05-20 07:39:57 WARNING django.request Not Found: /api/v1/student/job-apply/83
+2023-05-20 07:39:57 WARNING django.server "POST /api/v1/student/job-apply/83 HTTP/1.1" 404 4674
+2023-05-20 07:40:33 WARNING django.request Not Found: /api/v1/student/job-apply/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0NjU0MzA1LCJpYXQiOjE2ODQ1Njc5MDUsImp0aSI6ImExY2I5NzBlN2Q3MjRhYmRiOTljZTZmNWM3MmZlZjRhIiwidXNlcl9pZCI6MTc3fQ.CwenaACpK9P-rTShvUHg9Wb5Q8rxDPDysqhffkA2ubg
+2023-05-20 07:40:33 WARNING django.server "POST /api/v1/student/job-apply/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0NjU0MzA1LCJpYXQiOjE2ODQ1Njc5MDUsImp0aSI6ImExY2I5NzBlN2Q3MjRhYmRiOTljZTZmNWM3MmZlZjRhIiwidXNlcl9pZCI6MTc3fQ.CwenaACpK9P-rTShvUHg9Wb5Q8rxDPDysqhffkA2ubg HTTP/1.1" 404 5361
+2023-05-20 07:41:16 WARNING django.request Not Found: /api/v1/student/job-apply/83
+2023-05-20 07:41:16 WARNING django.server "POST /api/v1/student/job-apply/83 HTTP/1.1" 404 4674
+2023-05-20 07:41:21 WARNING django.request Not Found: /api/v1/student/job-apply/83
+2023-05-20 07:41:21 WARNING django.server "GET /api/v1/student/job-apply/83 HTTP/1.1" 404 4673
+2023-05-20 07:42:51 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:42:51 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 401 57
+2023-05-20 07:47:07 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:47:07 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 401 57
+2023-05-20 07:47:11 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:47:11 WARNING django.server "GET /api/v1/student/job-apply/ HTTP/1.1" 401 3837
+2023-05-20 07:47:25 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:47:25 WARNING django.server "GET /api/v1/student/job-apply/ HTTP/1.1" 401 3837
+2023-05-20 07:47:25 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:47:25 WARNING django.server "GET /api/v1/student/job-apply/ HTTP/1.1" 401 3837
+2023-05-20 07:47:26 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:47:26 WARNING django.server "GET /api/v1/student/job-apply/ HTTP/1.1" 401 3837
+2023-05-20 07:47:37 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:47:37 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 401 57
+2023-05-20 07:47:39 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:47:39 WARNING django.server "GET /api/v1/student/job-apply/ HTTP/1.1" 401 3837
+2023-05-20 07:48:26 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:48:26 WARNING django.server "GET /api/v1/student/job-apply/ HTTP/1.1" 401 3837
+2023-05-20 07:48:39 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:48:39 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 401 57
+2023-05-20 07:52:54 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:52:54 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 401 183
+2023-05-20 07:53:02 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:53:02 WARNING django.server "GET /api/v1/student/job-apply/ HTTP/1.1" 401 3837
+2023-05-20 07:53:19 WARNING django.request Unauthorized: /api/v1/student/job-apply/
+2023-05-20 07:53:19 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 401 107
+2023-05-20 07:53:36 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 07:53:36 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 39
+2023-05-20 07:57:39 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 07:57:39 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 39
+2023-05-20 08:00:43 WARNING django.request Not Found: /api/v1/student/job-apply/${id}
+2023-05-20 08:00:43 WARNING django.server "POST /api/v1/student/job-apply/$%7Bid%7D HTTP/1.1" 404 4687
+2023-05-20 08:00:57 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:00:57 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 39
+2023-05-20 08:01:55 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:01:55 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 39
+2023-05-20 08:02:28 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:02:28 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 39
+2023-05-20 08:02:47 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:02:47 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 39
+2023-05-20 08:02:58 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:02:58 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 39
+2023-05-20 08:04:25 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:04:25 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 23
+2023-05-20 08:04:44 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:04:44 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:05:22 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:05:22 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 39
+2023-05-20 08:07:15 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:07:15 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:07:56 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:07:56 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:12:43 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:12:43 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:12:48 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:12:48 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:13:29 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:13:29 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:16:43 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:16:43 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:18:47 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:18:47 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:20:25 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:20:25 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:24:54 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:24:54 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:25:25 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:25:25 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:27:12 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 08:27:12 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 08:28:04 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 08:28:04 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 08:30:25 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 08:30:25 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 08:30:25 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 08:30:25 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 08:31:21 WARNING django.request Not Found: /
+2023-05-20 08:31:21 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-20 08:31:24 WARNING django.request Not Found: /studen
+2023-05-20 08:31:24 WARNING django.server "GET /studen HTTP/1.1" 404 2461
+2023-05-20 08:31:26 WARNING django.request Not Found: /student
+2023-05-20 08:31:26 WARNING django.server "GET /student HTTP/1.1" 404 2464
+2023-05-20 08:31:28 WARNING django.request Not Found: /student/
+2023-05-20 08:31:28 WARNING django.server "GET /student/ HTTP/1.1" 404 2467
+2023-05-20 08:38:44 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 08:38:44 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 08:38:48 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 08:38:48 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 08:38:49 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 08:38:49 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66

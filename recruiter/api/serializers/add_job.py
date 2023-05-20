@@ -20,7 +20,6 @@ class JobPostSerializer(serializers.ModelSerializer):
         model = Job
         exclude = [
             "slug",
-            "recruiter",
         ]
 
     def is_valid(self, *, raise_exception=False):
@@ -32,20 +31,41 @@ class JobPostSerializer(serializers.ModelSerializer):
         user = self.context["request"].user
         recruiter = Recruiter.objects.filter(user=user).first()
         if not recruiter:
-            raise serializers.ValidationError("User doesnot exist!")
+            raise serializers.ValidationError(
+                {
+                    "title": "Job Post",
+                    "message": "User doesnot exist!",
+                }
+            )
         data["recruiter"] = recruiter.id
         if "image" in data and not validate_image(image):
-            raise serializers.ValidationError("Please enter a valid url for image!")
-        if datetime.strptime(creationdate, "%Y-%m-%d").date() > date.today():
-            raise serializers.ValidationError("Creation date cannot be in the future.")
+            raise serializers.ValidationError(
+                {
+                    "title": "Job Post",
+                    "message": "Please enter a valid url for image!",
+                }
+            )
 
         if (
-            not validate_date_format(start_date)
+            not (start_date and end_date and creationdate)
+            or not validate_date_format(start_date)
             or not validate_date_format(end_date)
             or not validate_date_format(creationdate)
         ):
             raise serializers.ValidationError(
-                "Date has wrong format. Use one of these formats instead: YYYY-MM-DD."
+                {
+                    "title": "Job Post",
+                    "message": "Date has wrong format or is not available. Use the format YYYY-MM-DD and ensure the dates are valid.",
+                }
+            )
+
+        if datetime.strptime(creationdate, "%Y-%m-%d").date() > date.today():
+            print(date.today())
+            raise serializers.ValidationError(
+                {
+                    "title": "Job Post",
+                    "message": "Creation date cannot be in the future.",
+                }
             )
 
         return super().is_valid(raise_exception=raise_exception)
@@ -80,12 +100,38 @@ class RecruiterPasswordSerializer(BaseChangePasswordSerializer):
 
 
 class CandidateListSerializer(serializers.ModelSerializer):
+    title = serializers.ReadOnlyField(source="job.title")
+    salary = serializers.ReadOnlyField(source="job.salary")
+    start_date = serializers.ReadOnlyField(source="job.start_date")
+    end_date = serializers.ReadOnlyField(source="job.end_date")
+    experience = serializers.ReadOnlyField(source="job.experience")
+    creationdate = serializers.ReadOnlyField(source="job.creationdate")
+    mobile = serializers.ReadOnlyField(source="student.mobile")
+    email = serializers.ReadOnlyField(source="student.user.email")
+    first_name = serializers.ReadOnlyField(source="student.user.first_name")
+    last_name = serializers.ReadOnlyField(source="student.user.last_name")
+
     class Meta:
         model = Apply
-        fields = "__all__"
+        fields = [
+            "apply_date",
+            "resume",
+            "title",
+            "salary",
+            "mobile",
+            "email",
+            "first_name",
+            "last_name",
+            "start_date",
+            "end_date",
+            "creationdate",
+            "experience",
+        ]
 
 
 class RecruiterProfileSerializer(serializers.ModelSerializer):
+    first_name = serializers.CharField(write_only=True)
+    last_name = serializers.CharField(write_only=True)
     email = serializers.CharField(write_only=True)
 
     class Meta:
@@ -97,7 +143,20 @@ class RecruiterProfileSerializer(serializers.ModelSerializer):
             "type",
             "company",
             "email",
+            "first_name",
+            "last_name",
         ]
+
+    def to_representation(self, instance):
+        d = self.initial_data
+        user = self.context["request"].user
+        user.first_name = d.get("first_name", user.first_name)
+        user.last_name = d.get("last_name", user.last_name)
+        user.save()
+        response = super().to_representation(instance)
+        response["first_name"] = user.first_name
+        response["last_name"] = user.last_name
+        return response
 
     def is_valid(self, *, raise_exception=False):
         data = self.initial_data
@@ -138,6 +197,10 @@ class RecruiterProfileSerializer(serializers.ModelSerializer):
         return super().is_valid(raise_exception=raise_exception)
 
     def update(self, instance, validated_data):
+        user = instance.user
+        validated_data.pop("first_name", user.first_name)
+        validated_data.pop("last_name", user.last_name)
+        user.save()
         email = validated_data.get("email")
         instance.user.email = email
         instance.user.username = email

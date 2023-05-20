@@ -221,6 +221,7 @@ class RecruiterLoginView(generics.CreateAPIView):
                                         "image": recruiter.image.url,
                                         "access": f"{access}",
                                         "refresh": f"{refresh}",
+                                        "email": recruiter.user.email,
                                         **UserSerializer(recruiter.user).data,
                                     },
                                 }

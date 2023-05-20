@@ -138,14 +138,27 @@ class JobApplySerializer(serializers.ModelSerializer):
         validate_resume(resume)
 
         if not all([data.get("job"), data.get("resume")]):
-            raise serializers.ValidationError("Job and resume fields are required!")
+            raise serializers.ValidationError(
+                {
+                    "title": "Job Apply",
+                    "message": "Job and resume fields are required!",
+                }
+            )
 
         if not job.exists():
-            raise serializers.ValidationError("Job does not exist!")
+            raise serializers.ValidationError(
+                {
+                    "title": "Job Apply",
+                    "message": "Job does not exist!",
+                }
+            )
 
         if not student:
             raise serializers.ValidationError(
-                "This User does not exist in Student model!"
+                {
+                    "title": "Job Apply",
+                    "message": "This User does not exist in Student model!",
+                }
             )
 
         if Apply.objects.filter(job=job_id, student=student).exists():
