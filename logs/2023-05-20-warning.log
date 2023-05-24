@@ -201,3 +201,23 @@ AssertionError: The field 'name' was declared on serializer CandidateListSeriali
 2023-05-20 08:38:48 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
 2023-05-20 08:38:49 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
 2023-05-20 08:38:49 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 14:43:10 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-20 14:43:10 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-05-20 14:44:26 WARNING django.request Bad Request: /api/v1/student/job-apply/
+2023-05-20 14:44:26 WARNING django.server "POST /api/v1/student/job-apply/ HTTP/1.1" 400 73
+2023-05-20 14:44:56 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 14:44:56 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 14:44:59 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 14:44:59 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 14:45:02 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 14:45:02 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 14:45:03 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 14:45:03 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 14:45:17 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 14:45:17 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 14:45:18 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 14:45:18 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 14:45:29 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 14:45:29 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70
+2023-05-20 14:45:31 WARNING django.request Unprocessable Entity: /api/v1/accounts/recruiter-login/
+2023-05-20 14:45:31 WARNING django.server "POST /api/v1/accounts/recruiter-login/ HTTP/1.1" 422 70

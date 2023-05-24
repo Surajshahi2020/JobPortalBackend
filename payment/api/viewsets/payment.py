@@ -64,7 +64,6 @@ class KhaltiPaymentCreateView(generics.CreateAPIView):
 class KhaltiPaymentVerifyCreateView(generics.CreateAPIView):
     queryset = Payment.objects.all()
     serializer_class = KhaltiPaymentVerifySerializer
-    permission_classes = [IsStudent]
 
     def create(self, request, *args, **kwargs):
         response = super().create(request, *args, **kwargs)

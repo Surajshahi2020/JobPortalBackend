@@ -60,7 +60,6 @@ class JobPostSerializer(serializers.ModelSerializer):
             )
 
         if datetime.strptime(creationdate, "%Y-%m-%d").date() > date.today():
-            print(date.today())
             raise serializers.ValidationError(
                 {
                     "title": "Job Post",

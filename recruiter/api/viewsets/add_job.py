@@ -104,20 +104,18 @@ class JobViewSet(viewsets.ModelViewSet):
                 "title": "Job List",
                 "message": "Job listed successfully",
                 "data": serializer.data,
-                # "jobtitle": seria
             },
             200,
         )
 
     @extend_schema(
-        description="JobList Api",
+        description="JobList fetched Api",
         summary="Refer to Schemas At Bottom",
         responses={
             200: JobPostSerializer,
             404: {"message": "Bad Request"},
         },
         tags=["Recruiter Apis"],
-        exclude=True,
     )
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)

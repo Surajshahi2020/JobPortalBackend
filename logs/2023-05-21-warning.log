@@ -1,0 +1,2 @@
+2023-05-21 02:24:02 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-21 02:24:02 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66

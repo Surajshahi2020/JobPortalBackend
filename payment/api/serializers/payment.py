@@ -23,9 +23,9 @@ class KhaltiPaymentSerializer(serializers.ModelSerializer):
         data = {
             "purchase_order_id": str(obj.job.id),
             "amount": f"{amount}",
-            "return_url": "http://localhost:8000/api/v1/payment/make-payment/",
+            "return_url": "http://localhost:3000/",
             "purchase_order_name": f"My-{obj.job.title}",
-            "website_url": "http://localhost:8000/",
+            "website_url": "http://localhost:3000/",
         }
 
         verification_response = req.post(

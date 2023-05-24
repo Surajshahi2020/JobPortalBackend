@@ -1,0 +1,4 @@
+2023-05-23 10:07:10 WARNING django.request Not Found: /
+2023-05-23 10:07:10 WARNING django.server "GET / HTTP/1.1" 404 2425
+2023-05-23 10:56:50 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-05-23 10:56:50 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
