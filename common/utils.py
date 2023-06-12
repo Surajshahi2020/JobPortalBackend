@@ -25,6 +25,11 @@ PANEL_CHOICES = (
     ("E3", "Extra 3"),
 )
 
+MSG_TYPES = (
+    ("TEXT", "TEXT"),
+    ("FILE", "FILE"),
+)
+
 
 def random_string_generator(size=10, chars=string.ascii_lowercase + string.digits):
     return "".join(random.choice(chars) for _ in range(size))
@@ -98,3 +103,11 @@ def validate_resume(value):
         return value
     except AttributeError:
         raise serializers.ValidationError("Invalid file.")
+
+
+def validate_uuid(id):
+    uuid_pattern = "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    p = re.compile(uuid_pattern)
+    if re.match(p, id):
+        return True
+    return False

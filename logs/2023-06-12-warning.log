@@ -1,0 +1,2451 @@
+2023-06-12 04:44:51 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-06-12 04:44:51 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-06-12 04:44:51 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-06-12 04:44:51 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-06-12 04:44:52 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-06-12 04:44:52 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-06-12 04:44:52 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-06-12 04:44:52 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-06-12 04:45:17 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-06-12 04:45:17 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-06-12 04:45:17 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-06-12 04:45:17 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-06-12 04:45:36 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-06-12 04:45:36 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-06-12 04:45:36 WARNING django.request Unauthorized: /api/v1/recruiter/job-list/
+2023-06-12 04:45:36 WARNING django.server "GET /api/v1/recruiter/job-list/ HTTP/1.1" 401 183
+2023-06-12 05:59:04 WARNING django.request Unauthorized: /api/v1/cart/cart/add/
+2023-06-12 05:59:04 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 401 57
+2023-06-12 05:59:18 WARNING django.request Unauthorized: /api/v1/cart/cart/add/
+2023-06-12 05:59:18 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 401 183
+2023-06-12 06:00:11 WARNING django.request Unauthorized: /api/v1/accounts/student-login/
+2023-06-12 06:00:11 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 401 183
+2023-06-12 06:00:22 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-06-12 06:00:22 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-06-12 06:00:31 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-06-12 06:00:31 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-06-12 06:00:38 WARNING django.request Unprocessable Entity: /api/v1/accounts/student-login/
+2023-06-12 06:00:38 WARNING django.server "POST /api/v1/accounts/student-login/ HTTP/1.1" 422 66
+2023-06-12 06:01:16 ERROR django.request Internal Server Error: /api/v1/cart/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'asasasasas'": "CartItem.product" must be a "Job" instance.
+2023-06-12 06:01:16 ERROR django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 500 21352
+2023-06-12 06:03:35 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:03:35 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 49
+2023-06-12 06:03:45 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:03:45 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 108
+2023-06-12 06:03:50 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:03:50 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 50
+2023-06-12 06:03:57 ERROR django.request Internal Server Error: /api/v1/cart/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'asasasasas'": "CartItem.product" must be a "Job" instance.
+2023-06-12 06:03:57 ERROR django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 500 21352
+2023-06-12 06:05:32 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:05:32 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 58
+2023-06-12 06:08:51 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:08:51 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 58
+2023-06-12 06:08:57 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:08:57 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 60
+2023-06-12 06:11:10 ERROR django.request Internal Server Error: /api/v1/cart/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'asasasasas'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/serializers/cart.py", line 44, in is_valid
+    if not Job.objects.filter(pk=data["product"]).exists():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2057, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'asasasasas'.
+2023-06-12 06:11:10 ERROR django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 500 22635
+2023-06-12 06:11:19 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:11:19 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 51
+2023-06-12 06:14:48 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:14:48 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 51
+2023-06-12 06:15:22 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:15:22 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 51
+2023-06-12 06:15:47 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:15:47 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 51
+2023-06-12 06:16:06 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:16:06 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 51
+2023-06-12 06:16:07 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:16:07 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 51
+2023-06-12 06:16:25 WARNING django.request Bad Request: /api/v1/cart/cart/add/
+2023-06-12 06:16:25 WARNING django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 400 51
+2023-06-12 06:16:41 ERROR django.request Internal Server Error: /api/v1/cart/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: cart_cartitem.product_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/serializers/cart.py", line 60, in create
+    return super().create(validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: cart_cartitem.product_id
+2023-06-12 06:16:41 ERROR django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 500 23742
+2023-06-12 06:17:29 ERROR django.request Internal Server Error: /api/v1/cart/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/serializers/cart.py", line 59, in create
+    return super().create(validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'26'": "CartItem.product" must be a "Job" instance.
+2023-06-12 06:17:29 ERROR django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 500 21491
+2023-06-12 06:21:54 ERROR django.request Internal Server Error: /api/v1/cart/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: cart_cartitem.product_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/serializers/cart.py", line 62, in create
+    return super().create(validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: cart_cartitem.product_id
+2023-06-12 06:21:54 ERROR django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 500 23742
+2023-06-12 06:22:17 ERROR django.request Internal Server Error: /api/v1/cart/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/serializers/cart.py", line 62, in create
+    return super().create(validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'26'": "CartItem.product" must be a "Job" instance.
+2023-06-12 06:22:17 ERROR django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 500 21491
+2023-06-12 06:25:25 ERROR django.request Internal Server Error: /api/v1/cart/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/serializers/cart.py", line 61, in create
+    ci = CartItem.objects.create(product=product, creator=user)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'26'": "CartItem.product" must be a "Job" instance.
+2023-06-12 06:25:25 ERROR django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 500 21337
+2023-06-12 06:25:53 ERROR django.request Internal Server Error: /api/v1/cart/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/serializers/cart.py", line 61, in create
+    ci = CartItem.objects.create(product=product, creator=user)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'26'": "CartItem.product" must be a "Job" instance.
+2023-06-12 06:25:53 ERROR django.server "POST /api/v1/cart/cart/add/ HTTP/1.1" 500 21337
+2023-06-12 06:26:46 ERROR django.request Internal Server Error: /api/v1/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/serializers/cart.py", line 61, in create
+    ci = CartItem.objects.create(product=product, creator=user)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'26'": "CartItem.product" must be a "Job" instance.
+2023-06-12 06:26:46 ERROR django.server "POST /api/v1/cart/add/ HTTP/1.1" 500 21317
+2023-06-12 06:27:48 ERROR django.request Internal Server Error: /api/v1/cart/add/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 31, in create
+    "data": super().create(request, *args, **kwargs).data,
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/serializers/cart.py", line 62, in create
+    ci = CartItem.objects.create(product=product, creator=user)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'26'": "CartItem.product" must be a "Job" instance.
+2023-06-12 06:27:48 ERROR django.server "POST /api/v1/cart/add/ HTTP/1.1" 500 21317
+2023-06-12 06:36:30 ERROR django.request Internal Server Error: /db/admin/cart/usercart/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: UserCart has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1799, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1309, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'price' for BigAutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 285, in lookup_field
+    value = attr()
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self.total_price} -- {self.creator}"
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 26, in total_price
+    self.items.all()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 592, in aggregate
+    return self.query.chain().get_aggregation(self.db, kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 393, in get_aggregation
+    aggregate = aggregate_expr.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 942, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 694, in resolve_expression
+    lhs = self.lhs.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 822, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1945, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1803, in transform
+    raise last_field_exception
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'price' into field. Choices are: apply, cartitem, chatroom, creationdate, description, end_date, experience, id, image, location, payment, recruiter, recruiter_id, salary, skills, slug, start_date, title
+2023-06-12 06:36:30 ERROR django.server "GET /db/admin/cart/usercart/ HTTP/1.1" 500 521170
+2023-06-12 06:38:28 ERROR django.request Internal Server Error: /db/admin/cart/usercart/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: UserCart has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1799, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1309, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'price' for BigAutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 285, in lookup_field
+    value = attr()
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self.total_price} -- {self.creator}"
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 26, in total_price
+    self.items.all()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 592, in aggregate
+    return self.query.chain().get_aggregation(self.db, kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 393, in get_aggregation
+    aggregate = aggregate_expr.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 942, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 694, in resolve_expression
+    lhs = self.lhs.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 822, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1945, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1803, in transform
+    raise last_field_exception
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'price' into field. Choices are: apply, cartitem, chatroom, creationdate, description, end_date, experience, id, image, location, payment, recruiter, recruiter_id, salary, skills, slug, start_date, title
+2023-06-12 06:38:28 ERROR django.server "GET /db/admin/cart/usercart/ HTTP/1.1" 500 521207
+2023-06-12 07:01:34 ERROR django.request Internal Server Error: /db/admin/cart/usercart/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: UserCart has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1799, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1309, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'price' for BigAutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 285, in lookup_field
+    value = attr()
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self.total_price} -- {self.creator}"
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 26, in total_price
+    self.items.all()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 592, in aggregate
+    return self.query.chain().get_aggregation(self.db, kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 393, in get_aggregation
+    aggregate = aggregate_expr.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 942, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 694, in resolve_expression
+    lhs = self.lhs.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 822, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1945, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1803, in transform
+    raise last_field_exception
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'price' into field. Choices are: apply, cartitem, chatroom, creationdate, description, end_date, experience, id, image, location, payment, recruiter, recruiter_id, salary, skills, slug, start_date, title
+2023-06-12 07:01:34 ERROR django.server "GET /db/admin/cart/usercart/ HTTP/1.1" 500 522089
+2023-06-12 07:01:40 ERROR django.request Internal Server Error: /db/admin/cart/usercart/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: UserCart has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1799, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1309, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'price' for BigAutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 285, in lookup_field
+    value = attr()
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self.total_price} -- {self.creator}"
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 26, in total_price
+    self.items.all()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 592, in aggregate
+    return self.query.chain().get_aggregation(self.db, kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 393, in get_aggregation
+    aggregate = aggregate_expr.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 942, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 694, in resolve_expression
+    lhs = self.lhs.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 822, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1945, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1803, in transform
+    raise last_field_exception
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'price' into field. Choices are: apply, cartitem, chatroom, creationdate, description, end_date, experience, id, image, location, payment, recruiter, recruiter_id, salary, skills, slug, start_date, title
+2023-06-12 07:01:40 ERROR django.server "GET /db/admin/cart/usercart/ HTTP/1.1" 500 522052
+2023-06-12 07:12:58 WARNING django.request Bad Request: /api/v1/cart/add/
+2023-06-12 07:12:58 WARNING django.server "POST /api/v1/cart/add/ HTTP/1.1" 400 74
+2023-06-12 07:13:19 WARNING django.request Bad Request: /api/v1/cart/add/
+2023-06-12 07:13:19 WARNING django.server "POST /api/v1/cart/add/ HTTP/1.1" 400 74
+2023-06-12 08:19:39 WARNING django.request Not Found: /favicon.ico
+2023-06-12 08:19:39 WARNING django.request Not Found: /favicon.ico
+2023-06-12 08:19:39 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2476
+2023-06-12 08:21:53 ERROR django.request Internal Server Error: /db/admin/cart/usercart/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: UserCart has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1799, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1309, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'price' for BigAutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 285, in lookup_field
+    value = attr()
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self.total_price}--{self.creator}"
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 26, in total_price
+    self.items.all()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 592, in aggregate
+    return self.query.chain().get_aggregation(self.db, kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 393, in get_aggregation
+    aggregate = aggregate_expr.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 942, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 694, in resolve_expression
+    lhs = self.lhs.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 822, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1945, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1803, in transform
+    raise last_field_exception
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'price' into field. Choices are: apply, cartitem, chatroom, creationdate, description, end_date, experience, id, image, location, payment, recruiter, recruiter_id, salary, skills, slug, start_date, title
+2023-06-12 08:21:53 ERROR django.server "GET /db/admin/cart/usercart/ HTTP/1.1" 500 522036
+2023-06-12 08:22:05 ERROR django.request Internal Server Error: /db/admin/cart/usercart/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: UserCart has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 285, in lookup_field
+    value = attr()
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self.total}--{self.creator}"
+AttributeError: 'UserCart' object has no attribute 'total'
+2023-06-12 08:22:05 ERROR django.server "GET /db/admin/cart/usercart/ HTTP/1.1" 500 448648
+2023-06-12 08:22:17 ERROR django.request Internal Server Error: /db/admin/cart/usercart/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: UserCart has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 285, in lookup_field
+    value = attr()
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self}--{self.creator}"
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self}--{self.creator}"
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self}--{self.creator}"
+  [Previous line repeated 305 more times]
+RecursionError: maximum recursion depth exceeded
+2023-06-12 08:22:17 ERROR django.server "GET /db/admin/cart/usercart/ HTTP/1.1" 500 1389743
+2023-06-12 08:22:55 ERROR django.request Internal Server Error: /db/admin/cart/usercart/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: UserCart has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1799, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1309, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'price' for BigAutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 285, in lookup_field
+    value = attr()
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 37, in __str__
+    return f"{self.total_price}--{self.creator}"
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/models.py", line 26, in total_price
+    self.items.all()
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 592, in aggregate
+    return self.query.chain().get_aggregation(self.db, kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 393, in get_aggregation
+    aggregate = aggregate_expr.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 942, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 694, in resolve_expression
+    lhs = self.lhs.resolve_expression(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/expressions.py", line 822, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1945, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1803, in transform
+    raise last_field_exception
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'price' into field. Choices are: apply, cartitem, chatroom, creationdate, description, end_date, experience, id, image, location, payment, recruiter, recruiter_id, salary, skills, slug, start_date, title
+2023-06-12 08:22:55 ERROR django.server "GET /db/admin/cart/usercart/ HTTP/1.1" 500 522036
+2023-06-12 08:32:42 WARNING django.request Unauthorized: /api/v1/cart/add/
+2023-06-12 08:32:42 WARNING django.server "POST /api/v1/cart/add/ HTTP/1.1" 401 57
+2023-06-12 08:41:49 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:41:49 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:41:49 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:41:49 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:42:35 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:42:35 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:42:35 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:42:35 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:42:44 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:42:44 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:42:44 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:42:44 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:43:38 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:43:38 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:43:39 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:43:39 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:43:44 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:43:44 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 172174
+2023-06-12 08:43:44 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:43:44 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 172174
+2023-06-12 08:43:47 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:43:47 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 172174
+2023-06-12 08:43:47 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:43:47 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 172174
+2023-06-12 08:43:52 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:43:52 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:43:52 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1032, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class CartSerializer missing "Meta.model" attribute
+2023-06-12 08:43:52 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 171783
+2023-06-12 08:44:30 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1124, in get_field_names
+    assert not (fields is None and exclude is None), (
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the CartSerializer serializer.",)
+2023-06-12 08:44:30 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 184587
+2023-06-12 08:44:31 ERROR django.request Internal Server Error: /api/v1/doc/schema/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/utils.py", line 410, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 95, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1348, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1404, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 1575, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 907, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "/home/suraj/.local/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 999, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 1124, in get_field_names
+    assert not (fields is None and exclude is None), (
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the CartSerializer serializer.",)
+2023-06-12 08:44:31 ERROR django.server "GET /api/v1/doc/schema/ HTTP/1.1" 500 184587
+2023-06-12 08:46:19 WARNING django.request Unauthorized: /api/v1/cart/list/
+2023-06-12 08:46:19 WARNING django.server "GET /api/v1/cart/list/ HTTP/1.1" 401 57
+2023-06-12 08:46:25 ERROR django.request Internal Server Error: /api/v1/cart/list/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-06-12 08:46:25 ERROR django.server "GET /api/v1/cart/list/ HTTP/1.1" 500 19803
+2023-06-12 08:48:13 ERROR django.request Internal Server Error: /api/v1/cart/list/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-06-12 08:48:13 ERROR django.server "GET /api/v1/cart/list/ HTTP/1.1" 500 19803
+2023-06-12 08:51:12 ERROR django.request Internal Server Error: /api/v1/cart/list/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 57, in get
+    serializer = self.get_serializer(user_cart, many=True).data
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+TypeError: 'UserCart' object is not iterable
+2023-06-12 08:51:12 ERROR django.server "GET /api/v1/cart/list/ HTTP/1.1" 500 20427
+2023-06-12 08:51:13 ERROR django.request Internal Server Error: /api/v1/cart/list/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 57, in get
+    serializer = self.get_serializer(user_cart, many=True).data
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+TypeError: 'UserCart' object is not iterable
+2023-06-12 08:51:13 ERROR django.server "GET /api/v1/cart/list/ HTTP/1.1" 500 20427
+2023-06-12 08:52:07 ERROR django.request Internal Server Error: /api/v1/cart/list/
+Traceback (most recent call last):
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/suraj/Desktop/Python/JobBackend/JobPortalBackend/cart/api/viewsets/cart.py", line 57, in get
+    ser = self.get_serializer(user_cart, many=True).data
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/suraj/.local/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+TypeError: 'UserCart' object is not iterable
+2023-06-12 08:52:07 ERROR django.server "GET /api/v1/cart/list/ HTTP/1.1" 500 20420

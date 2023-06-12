@@ -32,6 +32,8 @@ urlpatterns = [
                 path("recruiter/", include("recruiter.urls")),
                 path("miscellaneous/", include("miscellaneous.urls")),
                 path("payment/", include("payment.urls")),
+                path("chat/", include("chat.urls")),
+                path("cart/", include("cart.urls")),
             ],
         ),
     ),

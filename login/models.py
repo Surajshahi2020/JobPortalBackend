@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator
 
 
 class StudentUser(models.Model):
@@ -43,6 +44,13 @@ class Job(models.Model):
     location = models.CharField(max_length=20)
     skills = models.CharField(max_length=200)
     creationdate = models.DateField()
+    price = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        validators=[MinValueValidator(0)],
+        null=True,
+        blank=True,
+    )
 
     def __str__(self) -> str:
         return f"{self.title}"
@@ -67,4 +75,4 @@ class Payment(models.Model):
     pidx = models.CharField(max_length=255)
 
     def __str__(self) -> str:
-        return f"{self.id}--{self.reference_code}"
+        return f"{self.id}"
