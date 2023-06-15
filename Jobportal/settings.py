@@ -54,8 +54,9 @@ INSTALLED_APPS = [
     "miscellaneous",
     "corsheaders",
     "payment",
-    "chat",
     "cart",
+    "notifications",
+    "comments",
 ]
 
 MIDDLEWARE = [

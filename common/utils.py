@@ -30,6 +30,16 @@ MSG_TYPES = (
     ("FILE", "FILE"),
 )
 
+DEVICE_TYPES = (
+    ("ios", "ios"),
+    ("android", "android"),
+    ("web", "web"),
+)
+
+SOUND_CHOICES = (("default", "default"),)
+
+NOTIF_PRIORITY = (("high", "high"),)
+
 
 def random_string_generator(size=10, chars=string.ascii_lowercase + string.digits):
     return "".join(random.choice(chars) for _ in range(size))
@@ -111,3 +121,7 @@ def validate_uuid(id):
     if re.match(p, id):
         return True
     return False
+
+
+def is_valid_choice(choice, enum):
+    return any(choice == option for option, _ in enum)
